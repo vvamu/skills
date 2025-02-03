@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\skills_hub.persistence\skills_hub.persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Repository\Groups\Implementation\" />
+    <Folder Include="Repository\Groups\Interfaces\" />
+    <Folder Include="Repository\LessonType\Implementation\" />
+    <Folder Include="Repository\User\Implementation\" />
+  </ItemGroup>
+
+</Project>

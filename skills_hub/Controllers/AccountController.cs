@@ -6,7 +6,7 @@ public class AccountController : Controller
 {
     public async Task<IActionResult> Item()
     {
-        return View("~/Views/Account/Item/Item.cshtml"); 
+        return View("~/Views/Account/Item/Item.cshtml");
     }
 
     public async Task<IActionResult> Create()
