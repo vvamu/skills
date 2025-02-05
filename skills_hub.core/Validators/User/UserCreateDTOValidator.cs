@@ -8,7 +8,8 @@ public class UserCreateDTOValidator : AbstractValidator<UserCreateDTO>
 {
     public UserCreateDTOValidator()
     {
-        RuleFor(x => x.EmailsArray).NotEmpty().WithMessage("Email is required.").Must(x => x.Any(email => !string.IsNullOrEmpty(email))).WithMessage("Email is required.").Must(x => x.All(email => new EmailAddressAttribute().IsValid(email) && email.EmailAddress().WithMessage("Invalid email format."))).WithMessage("Invalid email format.");
+        //&& email.EmailAddress().WithMessage("Invalid email format.")
+        RuleFor(x => x.EmailsArray).NotEmpty().WithMessage("Email is required.").Must(x => x.Any(email => !string.IsNullOrEmpty(email))).WithMessage("Email is required.").Must(x => x.All(email => new EmailAddressAttribute().IsValid(email) )).WithMessage("Invalid email format.");
         RuleFor(x => x.PhonesArray).NotEmpty().WithMessage("Phone is required.").Must(x => x.Any(email => !string.IsNullOrEmpty(email))).WithMessage("Phone is required.").Must(x => x.All(email => new PhoneAttribute().IsValid(email))).WithMessage("Invalid phone format.");
 
         RuleFor(x => x.Login).NotEmpty().WithMessage("Login is required.");

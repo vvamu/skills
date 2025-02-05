@@ -172,7 +172,7 @@ public class NotificationService : INotificationService
 
     private async Task<NotificationMessage> Create(NotificationMessage notification, List<ApplicationUser> usersToSend)
     {
-        var notificationUsers = usersToSend.Select(user => new NotificationUser()
+        var notificationUsers = usersToSend.Select(user => new domain.Models.ManyToMany.NotificationUser()
         {
             UserId = user.Id,
             NotificationMessageId = notification.Id

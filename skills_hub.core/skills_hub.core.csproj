@@ -13,7 +13,6 @@
   <ItemGroup>
     <Folder Include="Repository\Groups\Implementation\" />
     <Folder Include="Repository\Groups\Interfaces\" />
-    <Folder Include="Repository\LessonType\Implementation\" />
     <Folder Include="Repository\User\Implementation\" />
   </ItemGroup>
 

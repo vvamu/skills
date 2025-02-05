@@ -2,7 +2,7 @@
 using skills_hub.core.Repository.LessonType.Interfaces;
 using SkillsHub.Application.Validators.LessonTypeModels;
 
-namespace skills_hub.core.Repository.LessonType;
+namespace skills_hub.core.Repository.LessonType.Implementation;
 
 //For Admin Panel
 public class CourseService : AbstractLessonTypeLogModelService<Course>
@@ -15,7 +15,7 @@ public class CourseService : AbstractLessonTypeLogModelService<Course>
         _lessonTypeService = lessonTypeService;
     }
 
-    protected override void SetPropertyId(skills_hub.domain.Models.LessonTypes.LessonType item, Guid value)
+    protected override void SetPropertyId(domain.Models.LessonTypes.LessonType item, Guid value)
     {
         item.CourseId = value;
     }

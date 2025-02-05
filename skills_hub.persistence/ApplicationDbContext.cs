@@ -18,7 +18,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityR
     {
     }
 
-    public DbSet<Group> Groups { get; set; }
+    public DbSet<domain.Models.Groups.Group> Groups { get; set; }
     public DbSet<Lesson> Lessons { get; set; }
 
     public DbSet<LessonType> LessonTypes { get; set; }
@@ -34,7 +34,6 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityR
 
     #region Users
 
-    public DbSet<ApplicationUser> ApplicationUsers { get; set; }
     public DbSet<BaseUserInfo> BaseUserInfo { get; set; }
     public DbSet<Student> Students { get; set; }
     public DbSet<Teacher> Teachers { get; set; }

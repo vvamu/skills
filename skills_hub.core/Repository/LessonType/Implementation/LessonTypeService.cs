@@ -4,8 +4,8 @@ using skills_hub.core.Repository.User.Interfaces;
 using skills_hub.domain.Models.ManyToMany;
 using SkillsHub.Application.Validators.LessonTypeModels;
 
-namespace skills_hub.core.Repository.LessonType;
-using LessonType = skills_hub.domain.Models.LessonTypes.LessonType;
+namespace skills_hub.core.Repository.LessonType.Implementation;
+using LessonType = domain.Models.LessonTypes.LessonType;
 
 //For Admin Panel
 public class LessonTypeService : AbstractLogModelService<LessonType>, ILessonTypeService
@@ -51,7 +51,7 @@ public class LessonTypeService : AbstractLogModelService<LessonType>, ILessonTyp
             .FirstOrDefaultAsync(x => x.Id == itemId);
 
         //item.Children = GetAllParents((Guid)item.Id).Where(x => x.Id != item.Id).ToList();
-        item.Parents = GetAllChildren((Guid)item.Id).Where(x => x.Id != item.Id).ToList();
+        item.Parents = GetAllChildren(item.Id).Where(x => x.Id != item.Id).ToList();
 
         for (int i = 0; i < item.Parents.Count; i++)
         {
@@ -71,7 +71,7 @@ public class LessonTypeService : AbstractLogModelService<LessonType>, ILessonTyp
     public async Task<LessonType> CreateAsync(LessonType item, Guid[] paymentCategories)
     {
         var payments = await CheckCorrectPaymentCategories(paymentCategories, item.IsActive);
-        var res = await base.CreateAsync(item);
+        var res = await CreateAsync(item);
         var lessonTypePayments = payments.Select(x => new LessonTypePaymentCategory() { PaymentCategoryId = x.Id, LessonTypeId = item.Id });
         await _context.LessonTypePaymentCategories.AddRangeAsync(lessonTypePayments);
         await _context.SaveChangesAsync();

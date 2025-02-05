@@ -1,45 +1,72 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Moq;
+using skills_hub.core.Repository.LessonType;
+using skills_hub.domain.Models.LessonTypes;
+using skills_hub.domain.Models.User;
 using skills_hub.persistence;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using System.Security.Claims;
 
 namespace skills_hub.tests;
 
 public class Tests
 {
     [Test]
-    public async Task TestExampleMethod()
+    public async Task Returns_Expected_Values_From_the_Api()
     {
-        var dbOptionsBuilder = new DbContextOptionsBuilder().UseInMemoryDatabase();
+        //var opts = OptionsBuilder.OpenWeatherConfig();
+        //var clientFactory = ClientBuilder.OpenWeatherClientFactory(OpenWeatherResponses.OkResponse);
 
-        // using Moq as the mocking library
-        var utilityServiceMock = new Mock<UtilityService>();
-        utilityServiceMock.Setup(u => u.GetRandomNumber()).Returns(4);
+        var dbOptionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>().UseInMemoryDatabase("in_memory_db");
+        var list = new List<IdentityRole>()
+        {
+            new IdentityRole("Teacher"),
+            new IdentityRole("Student")
+        }.AsQueryable();
 
-        // arrange
+        var roleManagerMock = new Mock<RoleManager<IdentityRole>>(
+            new Mock<IRoleStore<IdentityRole>>().Object,
+            new IRoleValidator<IdentityRole>[0],
+            new Mock<ILookupNormalizer>().Object,
+            new Mock<IdentityErrorDescriber>().Object,
+            new Mock<ILogger<RoleManager<IdentityRole>>>().Object);
+
+        roleManagerMock.Setup(r => r.Roles).Returns(list);
+
         using (var db = new ApplicationDbContext(dbOptionsBuilder.Options))
         {
-            // fix up some data
-            db.Set<Customer>().Add(new Customer()
-            {
-                Id = 2,
-                Name = "Foo bar"
-            });
-            await db.SaveChangesAsync();
-        }
+            var fakeUserManager = new Mock<FakeUserManager>();
+            
 
-        using (var db = new MyDbContext(dbOptionsBuilder.Options))
-        {
-            // create the service
-            var service = new ExampleService(logger, db, utilityServiceMock.Object);
 
-            // act
-            var result = service.DoSomethingWithCustomer(2);
+            fakeUserManager.Setup(x => x.AddToRoleAsync(It.IsAny<ApplicationUser>(), It.IsAny<string>())).ReturnsAsync(IdentityResult.Success);
+            fakeUserManager.Setup(x => x.GetRolesAsync(It.IsAny<ApplicationUser>())).ReturnsAsync( new List<string>());
 
-            // assert
-            Assert.NotNull(result);
-            Assert.Equal(2, result.CustomerId);
-            Assert.Equal("Foo bar", result.CustomerName);
-            Assert.Equal(4, result.SomeRandomNumber);
+            var sut = new AgeTypeServices(db, fakeUserManager.Object);
+            var result = await sut.GetUsersAsync();
+            var u = await sut.CreateUserAsync();
+            result = await sut.GetUsersAsync();
+
+            Assert.Equals(new DateTime(1594155600), new DateTime(1594155600));
         }
     }
+}
+
+public class FakeUserManager : UserManager<ApplicationUser>
+{
+    public FakeUserManager()
+        : base(new Mock<IUserStore<ApplicationUser>>().Object,
+              new Mock<IOptions<IdentityOptions>>().Object,
+              new Mock<IPasswordHasher<ApplicationUser>>().Object,
+              new IUserValidator<ApplicationUser>[0],
+              new IPasswordValidator<ApplicationUser>[0],
+              new Mock<ILookupNormalizer>().Object,
+              new Mock<IdentityErrorDescriber>().Object,
+              new Mock<IServiceProvider>().Object,
+              new Mock<ILogger<UserManager<ApplicationUser>>>().Object)
+    { }
+
 }
