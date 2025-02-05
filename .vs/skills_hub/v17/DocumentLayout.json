@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\nadezhda\\own\\projects\\skills_hub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\repository\\lessontype\\implementation\\agetypeservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\repository\\lessontype\\implementation\\agetypeservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|solutionrelative:skills_hub.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\repository\\lessontype\\implementation\\agetypeservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\repository\\lessontype\\implementation\\agetypeservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\repository\\user\\baseuserinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -278,30 +278,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\UnitTest1.cs",
               "RelativeDocumentMoniker": "skills_hub.tests\\UnitTest1.cs",
               "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\UnitTest1.cs",
               "RelativeToolTip": "skills_hub.tests\\UnitTest1.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAAAEsAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwB0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T10:19:41.336Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AgeTypeServices.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Implementation\\AgeTypeServices.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\LessonType\\Implementation\\AgeTypeServices.cs",
               "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Implementation\\AgeTypeServices.cs",
               "RelativeToolTip": "skills_hub.core\\Repository\\LessonType\\Implementation\\AgeTypeServices.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAADgvyUAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAADgvyEAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-05T07:47:35.655Z",
               "EditorCaption": ""
