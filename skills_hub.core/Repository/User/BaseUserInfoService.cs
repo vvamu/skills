@@ -9,7 +9,7 @@ public class BaseUserInfoService : AbstractLogModelService<BaseUserInfo>
     private readonly ApplicationDbContext _context;
 
 
-    public BaseUserInfoService(ApplicationDbContext context, UserManager<ApplicationUser> userManager, IMapper mapper)
+    public BaseUserInfoService(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
     {
         _context = context;
         _validator = new BaseUserInfoValidator();

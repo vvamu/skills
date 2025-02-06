@@ -17,39 +17,6 @@ public abstract class AbstractLogModelService<T> : IAbstractLogModel<T> where T 
     protected IValidator<T> _validator { get; set; }
     protected IQueryable<T>? _fullInclude;
 
-
-    public virtual async Task<T> GetAsync(Guid? itemId, bool withParents = false)
-    {
-        if (itemId == Guid.Empty) return new T();
-        T? item = null;
-        if (_fullInclude != null)
-        {
-            item = await _fullInclude.FirstOrDefaultAsync(x => x.Id == itemId);
-        }
-        else
-            item = await _contextModel.FirstOrDefaultAsync(x => x.Id == itemId);
-        if (item == null) return new T();
-        item.Children = GetAllParents((Guid)itemId).Where(x => x.Id != itemId).ToList();
-        item.Parents = GetAllChildren((Guid)itemId).Where(x => x.Id != itemId).ToList();
-
-        if (withParents && _fullInclude != null)
-        {
-            if (item.Parents != null)
-            {
-                List<T> parentResult = new List<T>();
-
-                foreach (var par in item.Parents)
-                {
-                    parentResult.Add(await _fullInclude.FirstOrDefaultAsync(x => x.Id == (Guid)par.Id));
-                }
-                item.Parents = parentResult;
-            }
-        }
-
-
-        return item;
-    }
-
     public async Task<T> GetLastValueAsync(Guid? itemId, bool withParents = false)
     {
         if (itemId == Guid.Empty) return new T();
@@ -61,12 +28,14 @@ public abstract class AbstractLogModelService<T> : IAbstractLogModel<T> where T 
         }
         return res;
     }
-    public IQueryable<T> GetAllItemsToList()
+    public IQueryable<T> GetCurrentItems()
     {
         var items = _contextModel.Where(x => x.ParentId == null || x.ParentId == Guid.Empty);
         return items;
     }
-    public async Task<IQueryable<T>> GetAllAsync()
+
+
+    public async Task<IQueryable<T>> GetCurrentItemsWithParents()
     {
         var items = _contextModel.Where(x => x.ParentId == null || x.ParentId == Guid.Empty);
 
@@ -81,10 +50,11 @@ public abstract class AbstractLogModelService<T> : IAbstractLogModel<T> where T 
 
     public async Task<T> CreateAsync(T item)
     {
-        var itemId = Guid.Empty;
-        if (item.Id != null) itemId = item.Id;
+        var itemId = Guid.Empty; if (item.Id != null) itemId = item.Id;
+
         var oldValue = _contextModel.Find(itemId) ?? new T();
         await Validate(oldValue, item);
+
         item.Id = Guid.Empty;
         item.DateCreated = DateTime.Now;
         var res = await _contextModel.AddAsync(item);
@@ -115,7 +85,6 @@ public abstract class AbstractLogModelService<T> : IAbstractLogModel<T> where T 
         await _context.SaveChangesAsync();
         return await GetAsync(resCreated.Id);
     }
-
 
     public async Task<T> RemoveAsync(Guid itemId)
     {
@@ -156,8 +125,6 @@ public abstract class AbstractLogModelService<T> : IAbstractLogModel<T> where T 
     {
         return true;
     }
-
-
     public virtual async Task Validate(T oldValue, T newItem)
     {
         if (_validator != null)
@@ -184,6 +151,37 @@ public abstract class AbstractLogModelService<T> : IAbstractLogModel<T> where T 
 
     #region Helpers
 
+    protected virtual async Task<T> GetAsync(Guid? itemId, bool withParents = false)
+    {
+        if (itemId == Guid.Empty) return new T();
+        T? item = null;
+        if (_fullInclude != null)
+        {
+            item = await _fullInclude.FirstOrDefaultAsync(x => x.Id == itemId);
+        }
+        else
+            item = await _contextModel.FirstOrDefaultAsync(x => x.Id == itemId);
+        if (item == null) return new T();
+        item.Children = GetAllParents((Guid)itemId).Where(x => x.Id != itemId).ToList();
+        item.Parents = GetAllChildren((Guid)itemId).Where(x => x.Id != itemId).ToList();
+
+        if (withParents && _fullInclude != null)
+        {
+            if (item.Parents != null)
+            {
+                List<T> parentResult = new List<T>();
+
+                foreach (var par in item.Parents)
+                {
+                    parentResult.Add(await _fullInclude.FirstOrDefaultAsync(x => x.Id == (Guid)par.Id));
+                }
+                item.Parents = parentResult;
+            }
+        }
+
+
+        return item;
+    }
     protected bool AreObjectsDifferent(T oldValue, T newItem)
     {
         var properties = typeof(T).GetProperties();

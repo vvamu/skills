@@ -40,7 +40,6 @@ public abstract class AbstractLessonTypeLogModelService<T> : AbstractLogModelSer
         {
             var a2 = await _contextModel.Include(x => x.LessonTypes).Where(x => x.LessonTypes != null).FirstOrDefaultAsync(x => a.Id == x.Id);
             if (a2.LessonTypes != null && a2.LessonTypes.Count() > 0) return false;
-
         }
 
         return true;

@@ -10,12 +10,15 @@ public class AgeTypeServices : IAgeTypeServices
 {
     private ApplicationDbContext _context;
     private UserManager<ApplicationUser> _userManager;
+    private RoleManager<IdentityRole<Guid>> _roleManager;
 
-    public AgeTypeServices(ApplicationDbContext context,UserManager<ApplicationUser> userManager)
+    public AgeTypeServices(ApplicationDbContext context, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole<Guid>> roleManager)
     {
         _context = context;
         _userManager = userManager;
+        _roleManager = roleManager;
     }
+
     public async Task<List<AgeType>> GetAllAsync()
     {
        
@@ -41,12 +44,12 @@ public class AgeTypeServices : IAgeTypeServices
         };
         var res = await _context.Users.AddAsync(user);
         await _context.SaveChangesAsync();
-        var resUser = res.Entity; // Получаем добавленного пользователя
+        //var resUser = res.Entity; // Получаем добавленного пользователя
 
-        await _userManager.AddToRoleAsync(resUser, "Teacher");
-        await _context.SaveChangesAsync();
-
-        var userRoles = await _userManager.GetRolesAsync(resUser);
+        //await _userManager.AddToRoleAsync(resUser, "Teacher");
+        //await _context.SaveChangesAsync();
+        //var userRoles = await _userManager.IsInRoleAsync(resUser,"Student");
+        //var userRoles2 = await _userManager.IsInRoleAsync(resUser, "Teacher");
 
         return res.Entity;
 
