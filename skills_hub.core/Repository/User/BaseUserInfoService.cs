@@ -6,14 +6,12 @@ namespace skills_hub.core.Repository.User;
 
 public class BaseUserInfoService : AbstractLogModelService<BaseUserInfo>
 {
-    private readonly ApplicationDbContext _context;
-
-
-    public BaseUserInfoService(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+    public BaseUserInfoService(ApplicationDbContext context)
     {
         _context = context;
-        _validator = new BaseUserInfoValidator();
         _contextModel = _context.BaseUserInfo;
+        _validator = new BaseUserInfoValidator();
+       
     }
 
 }

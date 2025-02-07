@@ -10,9 +10,9 @@ public class BaseUserInfo : LogModel<BaseUserInfo>
 
     public new bool IsDeleted { get; set; }
     [NotMapped]
-    public string? FullName { get => $"{this?.LastName} {this?.FirstName} {this?.Surname}"; }
+    public string? FullName { get => $"{this?.Surname} {this?.FirstName} {this?.MiddleName}"; }
     public string FirstName { get; set; }
-    public string LastName { get; set; }
+    public string MiddleName { get; set; }
     public string Surname { get; set; }
     public string Sex { get; set; } = "Male";
     [DataType(DataType.Date)]
@@ -29,7 +29,7 @@ public class BaseUserInfo : LogModel<BaseUserInfo>
 
         BaseUserInfo other = (BaseUserInfo)obj;
         return FirstName == other.FirstName &&
-               LastName == other.LastName &&
+               MiddleName == other.MiddleName &&
                Surname == other.Surname;
         //Sex == other.Sex &&
         //BirthDate == other.BirthDate &&

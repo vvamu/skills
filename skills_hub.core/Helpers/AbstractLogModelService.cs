@@ -6,6 +6,7 @@ global using skills_hub.domain.Models.User;
 global using skills_hub.persistence;
 using Microsoft.EntityFrameworkCore;
 using skills_hub.domain;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace skills_hub.core.Helpers;
@@ -83,7 +84,8 @@ public abstract class AbstractLogModelService<T> : IAbstractLogModel<T> where T 
         itemDb.ParentId = resCreated.Id;
         _contextModel.Update(itemDb);
         await _context.SaveChangesAsync();
-        return await GetAsync(resCreated.Id);
+        var items = GetCurrentItems().ToList();
+        return await GetAsync(itemDb.Id);
     }
 
     public async Task<T> RemoveAsync(Guid itemId)
@@ -137,14 +139,16 @@ public abstract class AbstractLogModelService<T> : IAbstractLogModel<T> where T 
                 throw new Exception(errorsString);
             }
         }
+
+        //Check unique rows without considering parent rows
+        var resultSearching = await _contextModel.Where(x => x.Parent == null).ToListAsync();
+        //resultSearching = resultSearching.Where(x => !children.Select(x => x.Id).Contains(x.Id)).ToList();
+        resultSearching = resultSearching.Where(x => x.Equals(newItem)).ToList();
+        if (resultSearching.Count() > 1) throw new Exception("Entity with those properties already defined");
+
         if (oldValue == null) return;
         var children = GetAllChildren(oldValue.Id).OrderByDescending(x => x.DateCreated).ToList();
         if (children == null || children.Count == 0) return;
-        //Check unique rows without considering parent rows
-        var resultSearching = await _contextModel.Where(x => x.Parent == null).ToListAsync();
-        resultSearching = resultSearching.Where(x => !children.Select(x => x.Id).Contains(x.Id)).ToList();
-        resultSearching = resultSearching.Where(x => x.Equals(newItem)).ToList();
-        //if (resultSearching.Count() > 1) throw new Exception("Entity with those properties already defined");
         if (!AreObjectsDifferent(oldValue, newItem)) throw new Exception("No changes");
 
     }
@@ -203,7 +207,6 @@ public abstract class AbstractLogModelService<T> : IAbstractLogModel<T> where T 
 
         return false;
     }
-
     public IEnumerable<T> GetAllParents(Guid childId)
     {
         var child = _contextModel.FirstOrDefault(i => i.Id == childId);

@@ -69,7 +69,7 @@ public class ApplicationUser : IdentityUser<Guid>
     [NotMapped]
     public string? FirstName { get => UserInfo?.FirstName; }
     [NotMapped]
-    public string? LastName { get => UserInfo?.LastName; }
+    public string? MiddleName { get => UserInfo?.MiddleName; }
     [NotMapped]
     public string? Surname { get => UserInfo?.Surname; }
     [NotMapped]

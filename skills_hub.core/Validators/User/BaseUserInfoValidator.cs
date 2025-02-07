@@ -7,10 +7,8 @@ public class BaseUserInfoValidator : AbstractValidator<BaseUserInfo>
 {
     public BaseUserInfoValidator()
     {
-        RuleFor(x => x.EmailsArray).NotEmpty().WithMessage("Email is required.").Must(x => x.Any(email => !string.IsNullOrEmpty(email))).WithMessage("Email is required.").Must(x => x.All(email => new EmailAddressAttribute().IsValid(email))).WithMessage("Invalid email format.");
-        RuleFor(x => x.PhonesArray).NotEmpty().WithMessage("Phone is required.").Must(x => x.Any(email => !string.IsNullOrEmpty(email))).WithMessage("Phone is required.").Must(x => x.All(email => new PhoneAttribute().IsValid(email))).WithMessage("Invalid phone format.");
         RuleFor(x => x.FirstName).NotEmpty().WithMessage("FirstName is required.");
-        RuleFor(x => x.LastName).NotEmpty().WithMessage("LastName is required.");
+        RuleFor(x => x.MiddleName).NotEmpty().WithMessage("MiddleName is required.");
         RuleFor(x => x.Surname).NotEmpty().WithMessage("Surname is required.");
         RuleFor(x => x.BirthDate.Year).LessThan((DateTime.Now).Year - 2).GreaterThan(1900).NotEmpty().WithMessage("Birthday not correct.");
 
