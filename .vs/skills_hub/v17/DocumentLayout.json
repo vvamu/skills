@@ -3,16 +3,60 @@
   "WorkspaceRootPath": "D:\\nadezhda\\own\\projects\\skills_hub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\abstractmodeltest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|solutionrelative:skills_hub.tests\\abstractmodeltest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\lessontypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|solutionrelative:skills_hub.tests\\lessontypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\abstractlessontypelogmodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|solutionrelative:skills_hub.tests\\abstractlessontypelogmodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\helpers\\abstractlogmodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\helpers\\abstractlogmodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\abstractmodeltest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|solutionrelative:skills_hub.tests\\abstractmodeltest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\validators\\lessontypemodels\\agetypevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\validators\\lessontypemodels\\agetypevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\models\\user\\baseuserinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|solutionrelative:skills_hub.domain\\models\\user\\baseuserinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\models\\lessontypes\\agetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|solutionrelative:skills_hub.domain\\models\\lessontypes\\agetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\helpers\\abstractlessontypelogmodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\helpers\\abstractlessontypelogmodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\base\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|solutionrelative:skills_hub.domain\\base\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\repository\\lessontype\\implementation\\lessontypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\repository\\lessontype\\implementation\\lessontypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\repository\\lessontype\\implementation\\agetypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\repository\\lessontype\\implementation\\agetypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\helpers\\iabstractlogmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\helpers\\iabstractlogmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\models\\user\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|solutionrelative:skills_hub.domain\\models\\user\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\validators\\user\\usercreatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\validators\\user\\usercreatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\validators\\user\\baseuserinfovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,26 +67,6 @@
       "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\repository\\user\\baseuserinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\validators\\user\\usercreatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\validators\\user\\usercreatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\models\\user\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|solutionrelative:skills_hub.domain\\models\\user\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\helpers\\iabstractlogmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\helpers\\iabstractlogmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\helpers\\abstractlessontypelogmodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\helpers\\abstractlessontypelogmodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\test\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|solutionrelative:skills_hub.tests\\test\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D5B902FE-5E13-4CE9-A904-941E36FD3419}|skills_hub\\skills_hub.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\skills_hub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{D5B902FE-5E13-4CE9-A904-941E36FD3419}|skills_hub\\skills_hub.csproj|solutionrelative:skills_hub\\skills_hub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -51,20 +75,12 @@
       "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\repository\\user\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\repository\\lessontype\\implementation\\lessontypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\repository\\lessontype\\implementation\\lessontypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\repository\\lessontype\\implementation\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\repository\\lessontype\\implementation\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\repository\\lessontype\\implementation\\paymentcategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\repository\\lessontype\\implementation\\paymentcategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\repository\\lessontype\\implementation\\agetypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\repository\\lessontype\\implementation\\agetypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\repository\\lessontype\\interfaces\\ilessontypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,10 +103,6 @@
       "RelativeMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|solutionrelative:skills_hub.domain\\models\\manytomany\\lessontypepaymentcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\base\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|solutionrelative:skills_hub.domain\\base\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\base\\logmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|solutionrelative:skills_hub.domain\\base\\logmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -105,10 +117,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\dto\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\dto\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\validators\\lessontypemodels\\agetypevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\validators\\lessontypemodels\\agetypevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\validators\\groups\\lessonvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -219,10 +227,6 @@
       "RelativeMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|solutionrelative:skills_hub.domain\\models\\lessontypes\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\models\\lessontypes\\agetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|solutionrelative:skills_hub.domain\\models\\lessontypes\\agetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\skills_hub.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{30F0A4AA-BD30-4EC1-84D6-3117E8F3CE11}|skills_hub.domain\\skills_hub.domain.csproj|solutionrelative:skills_hub.domain\\skills_hub.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -269,90 +273,155 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedWidth": 189,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AbstractModelTest.cs",
-              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\AbstractModelTest.cs",
-              "RelativeDocumentMoniker": "skills_hub.tests\\AbstractModelTest.cs",
-              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\AbstractModelTest.cs",
-              "RelativeToolTip": "skills_hub.tests\\AbstractModelTest.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAqwEIAAAAAAAAAAAAAAA==",
+              "Title": "LessonTypeService.cs",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\LessonTypeService.cs",
+              "RelativeDocumentMoniker": "skills_hub.tests\\LessonTypeService.cs",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\LessonTypeService.cs",
+              "RelativeToolTip": "skills_hub.tests\\LessonTypeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T13:15:29.07Z",
+              "WhenOpened": "2025-02-10T14:24:10.137Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "AbstractLogModelService.cs",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Helpers\\AbstractLogModelService.cs",
+              "RelativeDocumentMoniker": "skills_hub.core\\Helpers\\AbstractLogModelService.cs",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Helpers\\AbstractLogModelService.cs",
+              "RelativeToolTip": "skills_hub.core\\Helpers\\AbstractLogModelService.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAArwH8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T14:16:53.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AbstractLessonTypeLogModelService.cs",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\AbstractLessonTypeLogModelService.cs",
+              "RelativeDocumentMoniker": "skills_hub.tests\\AbstractLessonTypeLogModelService.cs",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\AbstractLessonTypeLogModelService.cs",
+              "RelativeToolTip": "skills_hub.tests\\AbstractLessonTypeLogModelService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAD4vykAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T13:58:35.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "BaseUserInfo.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\User\\BaseUserInfo.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\User\\BaseUserInfo.cs",
               "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\User\\BaseUserInfo.cs",
               "RelativeToolTip": "skills_hub.domain\\Models\\User\\BaseUserInfo.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAD4vxAAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAjwBoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T08:34:40.555Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserCreateDTOValidator.cs",
-              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\User\\UserCreateDTOValidator.cs",
-              "RelativeDocumentMoniker": "skills_hub.core\\Validators\\User\\UserCreateDTOValidator.cs",
-              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\User\\UserCreateDTOValidator.cs",
-              "RelativeToolTip": "skills_hub.core\\Validators\\User\\UserCreateDTOValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T09:10:13.844Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BaseUserInfoValidator.cs",
-              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\User\\BaseUserInfoValidator.cs",
-              "RelativeDocumentMoniker": "skills_hub.core\\Validators\\User\\BaseUserInfoValidator.cs",
-              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\User\\BaseUserInfoValidator.cs",
-              "RelativeToolTip": "skills_hub.core\\Validators\\User\\BaseUserInfoValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T10:58:54.873Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AbstractLogModelService.cs",
-              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Helpers\\AbstractLogModelService.cs",
-              "RelativeDocumentMoniker": "skills_hub.core\\Helpers\\AbstractLogModelService.cs",
-              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Helpers\\AbstractLogModelService.cs",
-              "RelativeToolTip": "skills_hub.core\\Helpers\\AbstractLogModelService.cs",
-              "ViewState": "AgIAAHoAAAAAAAAAAADgv5AAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T13:23:21.843Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "BaseUserInfoService.cs",
-              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\User\\BaseUserInfoService.cs",
-              "RelativeDocumentMoniker": "skills_hub.core\\Repository\\User\\BaseUserInfoService.cs",
-              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\User\\BaseUserInfoService.cs",
-              "RelativeToolTip": "skills_hub.core\\Repository\\User\\BaseUserInfoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA7AAAAAAAAAA==",
+              "Title": "AgeTypeValidator.cs",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\LessonTypeModels\\AgeTypeValidator.cs",
+              "RelativeDocumentMoniker": "skills_hub.core\\Validators\\LessonTypeModels\\AgeTypeValidator.cs",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\LessonTypeModels\\AgeTypeValidator.cs",
+              "RelativeToolTip": "skills_hub.core\\Validators\\LessonTypeModels\\AgeTypeValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T06:51:29.85Z",
+              "WhenOpened": "2025-02-03T10:48:10.622Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "AgeType.cs",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\LessonTypes\\AgeType.cs",
+              "RelativeDocumentMoniker": "skills_hub.domain\\Models\\LessonTypes\\AgeType.cs",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\LessonTypes\\AgeType.cs",
+              "RelativeToolTip": "skills_hub.domain\\Models\\LessonTypes\\AgeType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T08:16:41.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LessonTypeService.cs",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Implementation\\LessonTypeService.cs",
+              "RelativeDocumentMoniker": "skills_hub.core\\Repository\\LessonType\\Implementation\\LessonTypeService.cs",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Implementation\\LessonTypeService.cs",
+              "RelativeToolTip": "skills_hub.core\\Repository\\LessonType\\Implementation\\LessonTypeService.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAIwGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T11:27:07.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AbstractModelTest.cs",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\AbstractModelTest.cs",
+              "RelativeDocumentMoniker": "skills_hub.tests\\AbstractModelTest.cs",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\AbstractModelTest.cs",
+              "RelativeToolTip": "skills_hub.tests\\AbstractModelTest.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T13:15:29.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AbstractLessonTypeLogModelService.cs",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Helpers\\AbstractLessonTypeLogModelService.cs",
+              "RelativeDocumentMoniker": "skills_hub.core\\Helpers\\AbstractLessonTypeLogModelService.cs",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Helpers\\AbstractLessonTypeLogModelService.cs",
+              "RelativeToolTip": "skills_hub.core\\Helpers\\AbstractLessonTypeLogModelService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T11:14:14.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Base\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "skills_hub.domain\\Base\\BaseEntity.cs",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Base\\BaseEntity.cs",
+              "RelativeToolTip": "skills_hub.domain\\Base\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T08:07:24.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AgeTypeService.cs",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Implementation\\AgeTypeService.cs",
+              "RelativeDocumentMoniker": "skills_hub.core\\Repository\\LessonType\\Implementation\\AgeTypeService.cs",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Implementation\\AgeTypeService.cs",
+              "RelativeToolTip": "skills_hub.core\\Repository\\LessonType\\Implementation\\AgeTypeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T11:13:44.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\User\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\User\\ApplicationUser.cs",
@@ -365,43 +434,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UnitTest1.cs",
-              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\test\\UnitTest1.cs",
-              "RelativeDocumentMoniker": "skills_hub.tests\\test\\UnitTest1.cs",
-              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\test\\UnitTest1.cs",
-              "RelativeToolTip": "skills_hub.tests\\test\\UnitTest1.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAwEkAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T10:19:41.336Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "IAbstractLogModel.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Helpers\\IAbstractLogModel.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Helpers\\IAbstractLogModel.cs",
               "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Helpers\\IAbstractLogModel.cs",
               "RelativeToolTip": "skills_hub.core\\Helpers\\IAbstractLogModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T10:32:47.126Z"
+              "WhenOpened": "2025-02-03T10:32:47.126Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AbstractLessonTypeLogModelService.cs",
-              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Helpers\\AbstractLessonTypeLogModelService.cs",
-              "RelativeDocumentMoniker": "skills_hub.core\\Helpers\\AbstractLessonTypeLogModelService.cs",
-              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Helpers\\AbstractLessonTypeLogModelService.cs",
-              "RelativeToolTip": "skills_hub.core\\Helpers\\AbstractLessonTypeLogModelService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAABTAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "BaseUserInfoService.cs",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\User\\BaseUserInfoService.cs",
+              "RelativeDocumentMoniker": "skills_hub.core\\Repository\\User\\BaseUserInfoService.cs",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\User\\BaseUserInfoService.cs",
+              "RelativeToolTip": "skills_hub.core\\Repository\\User\\BaseUserInfoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T11:14:14.799Z"
+              "WhenOpened": "2025-02-07T06:51:29.85Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
+              "Title": "BaseUserInfoValidator.cs",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\User\\BaseUserInfoValidator.cs",
+              "RelativeDocumentMoniker": "skills_hub.core\\Validators\\User\\BaseUserInfoValidator.cs",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\User\\BaseUserInfoValidator.cs",
+              "RelativeToolTip": "skills_hub.core\\Validators\\User\\BaseUserInfoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T10:58:54.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserCreateDTOValidator.cs",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\User\\UserCreateDTOValidator.cs",
+              "RelativeDocumentMoniker": "skills_hub.core\\Validators\\User\\UserCreateDTOValidator.cs",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\User\\UserCreateDTOValidator.cs",
+              "RelativeToolTip": "skills_hub.core\\Validators\\User\\UserCreateDTOValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T09:10:13.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "skills_hub.csproj",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\skills_hub.csproj",
               "RelativeDocumentMoniker": "skills_hub\\skills_hub.csproj",
@@ -413,7 +498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "NotificationService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\User\\NotificationService.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\User\\NotificationService.cs",
@@ -425,19 +510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "LessonTypeService.cs",
-              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Implementation\\LessonTypeService.cs",
-              "RelativeDocumentMoniker": "skills_hub.core\\Repository\\LessonType\\Implementation\\LessonTypeService.cs",
-              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Implementation\\LessonTypeService.cs",
-              "RelativeToolTip": "skills_hub.core\\Repository\\LessonType\\Implementation\\LessonTypeService.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAQwAoAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T11:27:07.298Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "LocationService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Implementation\\LocationService.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\LessonType\\Implementation\\LocationService.cs",
@@ -449,7 +522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "PaymentCategoryService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Implementation\\PaymentCategoryService.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\LessonType\\Implementation\\PaymentCategoryService.cs",
@@ -461,7 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "ILessonTypeService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Interfaces\\ILessonTypeService.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\LessonType\\Interfaces\\ILessonTypeService.cs",
@@ -473,19 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AgeTypeService.cs",
-              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Implementation\\AgeTypeService.cs",
-              "RelativeDocumentMoniker": "skills_hub.core\\Repository\\LessonType\\Implementation\\AgeTypeService.cs",
-              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Implementation\\AgeTypeService.cs",
-              "RelativeToolTip": "skills_hub.core\\Repository\\LessonType\\Implementation\\AgeTypeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T11:13:44.129Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "GroupTypeService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Implementation\\GroupTypeService.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\LessonType\\Implementation\\GroupTypeService.cs",
@@ -497,7 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "CourseService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Implementation\\CourseService.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\LessonType\\Implementation\\CourseService.cs",
@@ -509,7 +570,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "INotificationService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\User\\Interfaces\\INotificationService.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\User\\Interfaces\\INotificationService.cs",
@@ -521,7 +582,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "LessonTypePaymentCategory.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\ManyToMany\\LessonTypePaymentCategory.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\ManyToMany\\LessonTypePaymentCategory.cs",
@@ -533,7 +594,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "LogModel.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Base\\LogModel.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Base\\LogModel.cs",
@@ -545,19 +606,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Base\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "skills_hub.domain\\Base\\BaseEntity.cs",
-              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Base\\BaseEntity.cs",
-              "RelativeToolTip": "skills_hub.domain\\Base\\BaseEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T08:07:24.295Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "UserLoginValidator.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\User\\UserLoginValidator.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Validators\\User\\UserLoginValidator.cs",
@@ -569,7 +618,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "LessonTypePropertyModel.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Base\\LessonTypePropertyModel.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Base\\LessonTypePropertyModel.cs",
@@ -581,7 +630,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "UserLoginDTO.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\DTO\\UserLoginDTO.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\DTO\\UserLoginDTO.cs",
@@ -593,19 +642,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "AgeTypeValidator.cs",
-              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\LessonTypeModels\\AgeTypeValidator.cs",
-              "RelativeDocumentMoniker": "skills_hub.core\\Validators\\LessonTypeModels\\AgeTypeValidator.cs",
-              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\LessonTypeModels\\AgeTypeValidator.cs",
-              "RelativeToolTip": "skills_hub.core\\Validators\\LessonTypeModels\\AgeTypeValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T10:48:10.622Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "LessonValidator.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\Groups\\LessonValidator.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Validators\\Groups\\LessonValidator.cs",
@@ -617,7 +654,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "GroupValidator.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\Groups\\GroupValidator.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Validators\\Groups\\GroupValidator.cs",
@@ -629,7 +666,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "UserCreateDTO.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\DTO\\UserCreateDTO.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\DTO\\UserCreateDTO.cs",
@@ -641,7 +678,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "NotificationMessage.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\User\\NotificationMessage.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\User\\NotificationMessage.cs",
@@ -653,7 +690,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "WorkingDayValidator.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\Groups\\WorkingDayValidator.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Validators\\Groups\\WorkingDayValidator.cs",
@@ -665,7 +702,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "CourseValidator.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\LessonTypeModels\\CourseValidator.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Validators\\LessonTypeModels\\CourseValidator.cs",
@@ -677,7 +714,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "LessonTypeValidator.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\LessonTypeModels\\LessonTypeValidator.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Validators\\LessonTypeModels\\LessonTypeValidator.cs",
@@ -689,7 +726,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "LocationValidator.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\LessonTypeModels\\LocationValidator.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Validators\\LessonTypeModels\\LocationValidator.cs",
@@ -701,7 +738,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "PaymentCategoryValidator.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\LessonTypeModels\\PaymentCategoryValidator.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Validators\\LessonTypeModels\\PaymentCategoryValidator.cs",
@@ -713,7 +750,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "GroupTypeValidator.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Validators\\LessonTypeModels\\GroupTypeValidator.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Validators\\LessonTypeModels\\GroupTypeValidator.cs",
@@ -725,7 +762,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "Student.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\User\\Student.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\User\\Student.cs",
@@ -737,7 +774,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "LessonStudent.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\ManyToMany\\LessonStudent.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\ManyToMany\\LessonStudent.cs",
@@ -749,7 +786,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "NotificationUser.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\ManyToMany\\NotificationUser.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\ManyToMany\\NotificationUser.cs",
@@ -761,7 +798,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "GroupWorkingDay.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\Groups\\GroupWorkingDay.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\Groups\\GroupWorkingDay.cs",
@@ -773,7 +810,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 44,
               "Title": "Group.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\Groups\\Group.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\Groups\\Group.cs",
@@ -785,7 +822,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "LessonType.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\LessonTypes\\LessonType.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\LessonTypes\\LessonType.cs",
@@ -797,7 +834,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "Teacher.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\User\\Teacher.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\User\\Teacher.cs",
@@ -809,7 +846,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 46,
               "Title": "EmailMessage.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\EmailMessage.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\EmailMessage.cs",
@@ -821,7 +858,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 47,
               "Title": "Lesson.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\Groups\\Lesson.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\Groups\\Lesson.cs",
@@ -833,7 +870,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 50,
               "Title": "GroupStudent.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\ManyToMany\\GroupStudent.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\ManyToMany\\GroupStudent.cs",
@@ -845,7 +882,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 48,
               "Title": "Location.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\LessonTypes\\Location.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\LessonTypes\\Location.cs",
@@ -857,7 +894,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 51,
               "Title": "GroupTeacher.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\ManyToMany\\GroupTeacher.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\ManyToMany\\GroupTeacher.cs",
@@ -869,7 +906,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 52,
               "Title": "LessonTeacher.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\ManyToMany\\LessonTeacher.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\ManyToMany\\LessonTeacher.cs",
@@ -881,7 +918,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 49,
               "Title": "ApplicationUserBaseUserInfo.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\ManyToMany\\ApplicationUserBaseUserInfo.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\ManyToMany\\ApplicationUserBaseUserInfo.cs",
@@ -893,7 +930,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 53,
               "Title": "PaymentCategory.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\LessonTypes\\PaymentCategory.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\LessonTypes\\PaymentCategory.cs",
@@ -905,7 +942,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 54,
               "Title": "GroupType.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\LessonTypes\\GroupType.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\LessonTypes\\GroupType.cs",
@@ -917,7 +954,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 55,
               "Title": "Course.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\LessonTypes\\Course.cs",
               "RelativeDocumentMoniker": "skills_hub.domain\\Models\\LessonTypes\\Course.cs",
@@ -929,19 +966,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "AgeType.cs",
-              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\LessonTypes\\AgeType.cs",
-              "RelativeDocumentMoniker": "skills_hub.domain\\Models\\LessonTypes\\AgeType.cs",
-              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\Models\\LessonTypes\\AgeType.cs",
-              "RelativeToolTip": "skills_hub.domain\\Models\\LessonTypes\\AgeType.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA1wAIAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T08:16:41.321Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "skills_hub.domain.csproj",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\skills_hub.domain.csproj",
               "RelativeDocumentMoniker": "skills_hub.domain\\skills_hub.domain.csproj",
@@ -953,7 +978,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "skills_hub.persistence.csproj",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.persistence\\skills_hub.persistence.csproj",
               "RelativeDocumentMoniker": "skills_hub.persistence\\skills_hub.persistence.csproj",
@@ -965,7 +990,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\appsettings.json",
               "RelativeDocumentMoniker": "skills_hub\\appsettings.json",
@@ -977,7 +1002,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "Item.cshtml",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Views\\Account\\Item\\Item.cshtml",
               "RelativeDocumentMoniker": "skills_hub\\Views\\Account\\Item\\Item.cshtml",
@@ -989,7 +1014,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Views\\Account\\Create.cshtml",
               "RelativeDocumentMoniker": "skills_hub\\Views\\Account\\Create.cshtml",
@@ -1001,7 +1026,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "SignIn.cshtml",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Views\\Account\\SignIn.cshtml",
               "RelativeDocumentMoniker": "skills_hub\\Views\\Account\\SignIn.cshtml",
@@ -1013,7 +1038,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "skills_hub\\Controllers\\AccountController.cs",
@@ -1025,7 +1050,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "_StudentInfo.cshtml",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Views\\Account\\Item\\_StudentInfo.cshtml",
               "RelativeDocumentMoniker": "skills_hub\\Views\\Account\\Item\\_StudentInfo.cshtml",
@@ -1037,7 +1062,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Views\\Account\\Index\\Index.cshtml",
               "RelativeDocumentMoniker": "skills_hub\\Views\\Account\\Index\\Index.cshtml",
@@ -1049,7 +1074,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "package.json",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\package.json",
               "RelativeDocumentMoniker": "package.json",

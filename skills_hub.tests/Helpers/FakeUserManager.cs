@@ -4,7 +4,7 @@ using Microsoft.Extensions.Options;
 using Moq;
 using skills_hub.domain.Models.User;
 
-namespace skills_hub.tests;
+namespace skills_hub.tests.Helpers;
 
 public class FakeUserManager : UserManager<ApplicationUser>
 {

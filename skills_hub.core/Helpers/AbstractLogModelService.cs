@@ -35,6 +35,7 @@ public abstract class AbstractLogModelService<T> : IAbstractLogModel<T> where T 
         return items;
     }
 
+    public IQueryable<T> GetItems() => _contextModel;
 
     public async Task<IQueryable<T>> GetCurrentItemsWithParents()
     {
@@ -144,7 +145,7 @@ public abstract class AbstractLogModelService<T> : IAbstractLogModel<T> where T 
         var resultSearching = await _contextModel.Where(x => x.Parent == null).ToListAsync();
         //resultSearching = resultSearching.Where(x => !children.Select(x => x.Id).Contains(x.Id)).ToList();
         resultSearching = resultSearching.Where(x => x.Equals(newItem)).ToList();
-        if (resultSearching.Count() > 1) throw new Exception("Entity with those properties already defined");
+        if (resultSearching.Count() > 0  && resultSearching.FirstOrDefault().Id != oldValue.Id) throw new Exception("Entity with those properties already defined");
 
         if (oldValue == null) return;
         var children = GetAllChildren(oldValue.Id).OrderByDescending(x => x.DateCreated).ToList();

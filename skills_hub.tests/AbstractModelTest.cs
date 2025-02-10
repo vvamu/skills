@@ -13,39 +13,51 @@ using AutoMapper;
 using skills_hub.core.Repository.User;
 using skills_hub.core.Helpers;
 using Microsoft.Extensions.DependencyInjection;
+using skills_hub.tests.Helpers;
+using skills_hub.core.Repository.LessonType.Interfaces;
 
 namespace skills_hub.tests;
 
-public class AbstractModelTest
+public class AbstractModelTest : IDisposable
 {
-    private Mock<FakeUserManager> _mockUserManager;
+    private ApplicationDbContext? _db;
+    private IAbstractLogModel<BaseUserInfo> _baseUserInfoService;
     [SetUp]
     public void Setup()
     {
-        _mockUserManager = new Mock<FakeUserManager>(); //IAbstractLogModel<BaseUserInfo>
 
-        _mockUserManager.Setup(x => x.AddToRoleAsync(It.IsAny<ApplicationUser>(), It.IsAny<string>())).ReturnsAsync(IdentityResult.Success);
-        _mockUserManager.Setup(x => x.IsInRoleAsync(It.IsAny<ApplicationUser>(), It.IsAny<string>())).ReturnsAsync(new bool());
-        _mockUserManager.Setup(x => x.GetRolesAsync(It.IsAny<ApplicationUser>())).ReturnsAsync(new List<string>());
+
+        var dbOptionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>().UseInMemoryDatabase("in_memory_db");
+        _db = new ApplicationDbContext(dbOptionsBuilder.Options);
+        _baseUserInfoService = new BaseUserInfoService(_db);
+
     }
-        [Test]
+
+    public void Dispose()
+    {
+        _db.Dispose();
+    }
+    [Test]
     public async Task Create_BaseUserInfo()
     {
-        var dbOptionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>().UseInMemoryDatabase("in_memory_db");
-        var db = new ApplicationDbContext(dbOptionsBuilder.Options);
-
         try
         {
-            IAbstractLogModel<BaseUserInfo> sut = new BaseUserInfoService(db);
-            var items = sut.GetCurrentItems().ToList();
-            var resCreated = await sut.CreateAsync(new BaseUserInfo()
+
+            
+            var items = _baseUserInfoService.GetCurrentItems().ToList();
+            foreach (var item in items)
+            {
+                await _baseUserInfoService.RemoveAsync(item.Id);
+            }
+
+            var resCreated = await _baseUserInfoService.CreateAsync(new BaseUserInfo()
             {
                 BirthDate = DateTime.Now.AddYears(-35),
                 FirstName = "Marina",
                 MiddleName = "Dmitrievna",
                 Surname = "Malikova"
             });
-            items = sut.GetCurrentItems().ToList() ?? new();
+            items = _baseUserInfoService.GetCurrentItems().ToList() ?? new();
             Assert.AreEqual(items.Count(), 1);
         }
         catch (Exception ex) 
@@ -55,30 +67,53 @@ public class AbstractModelTest
     }
 
     [Test]
-    public async Task Update_BaseUserInfo()//Create_with_not_unique_key_return_error_BaseUserInfo()
+
+    public async Task Create_Equals_BaseUserInfo_Return_Error()
     {
-        var dbOptionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>().UseInMemoryDatabase("in_memory_db");
-        var db = new ApplicationDbContext(dbOptionsBuilder.Options);
-        
-
-        try
-        {
-            IAbstractLogModel<BaseUserInfo> sut = new BaseUserInfoService(db);
-
-            var items = sut.GetCurrentItems().ToList();
-            //foreach(var item in items)
-            //{
-            //    await sut.RemoveAsync(item.Id);
-            //}
-            var resCreated = await sut.CreateAsync(new BaseUserInfo()
+            var items = _baseUserInfoService.GetCurrentItems().ToList();
+            foreach (var item in items)
+            {
+                await _baseUserInfoService.RemoveAsync(item.Id);
+            }
+            var resCreated = await _baseUserInfoService.CreateAsync(new BaseUserInfo()
             {
                 BirthDate = DateTime.Now.AddYears(-35),
                 FirstName = "Marina",
                 MiddleName = "Dmitrievna",
                 Surname = "Malikova"
             });
-            items = sut.GetCurrentItems().ToList();
-            var resUpdated = await sut.UpdateAsync(new BaseUserInfo()
+            Assert.That(async () =>
+            {
+                var res = await _baseUserInfoService.CreateAsync(new BaseUserInfo()
+                {
+                    BirthDate = DateTime.Now.AddYears(-35),
+                    FirstName = "Marina",
+                    MiddleName = "Dmitrievna",
+                    Surname = "Malikova"
+                });
+                
+            }, Throws.Exception);
+    }
+
+    [Test]
+    public async Task Update_BaseUserInfo()//Create_with_not_unique_key_return_error_BaseUserInfo()
+    {     
+        try
+        {
+            var items = _baseUserInfoService.GetCurrentItems().ToList();
+            foreach (var item in items)
+            {
+                await _baseUserInfoService.RemoveAsync(item.Id);
+            }
+            var resCreated = await _baseUserInfoService.CreateAsync(new BaseUserInfo()
+            {
+                BirthDate = DateTime.Now.AddYears(-35),
+                FirstName = "Marina",
+                MiddleName = "Dmitrievna",
+                Surname = "Malikova"
+            });
+            items = _baseUserInfoService.GetCurrentItems().ToList();
+            var resUpdated = await _baseUserInfoService.UpdateAsync(new BaseUserInfo()
             {
                 Id = resCreated.Id,
                 BirthDate = DateTime.Now.AddYears(-35),
@@ -86,10 +121,43 @@ public class AbstractModelTest
                 MiddleName = "Dmitrievna",
                 Surname = "Malikova"
             });
-            var items2 = await sut.GetCurrentItemsWithParents();
-            items = items2.ToList() ?? new();
+            items = await (await _baseUserInfoService.GetCurrentItemsWithParents()).ToListAsync();
+            var itemUpdated = items.ToList().FirstOrDefault() ?? new BaseUserInfo();
+            var allItems = await _baseUserInfoService.GetItems().ToListAsync();
+            
+            
+            Assert.That((itemUpdated.FirstName == "Marina_updated") && (itemUpdated.Parents?.Count() == 1) && allItems.Count == 2);
 
-            Assert.AreEqual(items.Count(), 1);
+        }
+        catch (Exception ex)
+        {
+            Assert.Fail(ex.Message);
+        }
+    }
+
+    [Test]
+    public async Task Delete_BaseUserInfo()
+    {
+        try
+        {
+            var items = _baseUserInfoService.GetCurrentItems().ToList();
+            foreach (var item in items)
+            {
+                await _baseUserInfoService.RemoveAsync(item.Id);
+            }
+            var resCreated = await _baseUserInfoService.CreateAsync(new BaseUserInfo()
+            {
+                BirthDate = DateTime.Now.AddYears(-35),
+                FirstName = "Marina",
+                MiddleName = "Dmitrievna",
+                Surname = "Malikova"
+            });
+            items = _baseUserInfoService.GetCurrentItems().ToList();
+            var resUpdated = await _baseUserInfoService.RemoveAsync(resCreated.Id);
+            var resDeletedItems = await _baseUserInfoService.GetItems().ToListAsync();
+
+            Assert.That(items.Count == 1 && resDeletedItems.Count == 0);
+
         }
         catch (Exception ex)
         {

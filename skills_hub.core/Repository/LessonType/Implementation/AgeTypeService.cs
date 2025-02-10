@@ -7,7 +7,7 @@ namespace skills_hub.core.Repository.LessonType.Implementation;
 //For Admin Panel
 public class AgeTypeService : AbstractLessonTypeLogModelService<AgeType>
 {
-    public AgeTypeService(ApplicationDbContext context, UserManager<ApplicationUser> userManager, ILessonTypeService lessonTypeService)
+    public AgeTypeService(ApplicationDbContext context, ILessonTypeService lessonTypeService)
     {
         _context = context;
         _validator = new AgeTypeValidator();

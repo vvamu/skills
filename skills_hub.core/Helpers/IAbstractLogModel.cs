@@ -2,6 +2,7 @@
 public interface IAbstractLogModel<T>
 {
     public Task<T> GetLastValueAsync(Guid? itemId, bool withParents = false);
+    public IQueryable<T> GetItems();
     public IQueryable<T> GetCurrentItems();
     public Task<IQueryable<T>> GetCurrentItemsWithParents();
     public Task<T> UpdateAsync(T item);
