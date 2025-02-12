@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|solutionrelative:skills_hub.tests\\abstractlogmodeltest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\lessontypeservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|solutionrelative:skills_hub.tests\\lessontypeservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\repository\\lessontype\\interfaces\\ilessontypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\repository\\lessontype\\interfaces\\ilessontypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\usertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|solutionrelative:skills_hub.tests\\usertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\lessontypeservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB}|skills_hub.tests\\skills_hub.tests.csproj|solutionrelative:skills_hub.tests\\lessontypeservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\repository\\lessontype\\implementation\\lessontypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -44,9 +44,48 @@
               "RelativeDocumentMoniker": "skills_hub.tests\\AbstractLogModelTest.cs",
               "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\AbstractLogModelTest.cs",
               "RelativeToolTip": "skills_hub.tests\\AbstractLogModelTest.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAswDQAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAswCwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T13:34:04.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IAbstractLogModel.cs",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Helpers\\IAbstractLogModel.cs",
+              "RelativeDocumentMoniker": "skills_hub.core\\Helpers\\IAbstractLogModel.cs",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Helpers\\IAbstractLogModel.cs",
+              "RelativeToolTip": "skills_hub.core\\Helpers\\IAbstractLogModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T11:26:05.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ILessonTypeService.cs",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Interfaces\\ILessonTypeService.cs",
+              "RelativeDocumentMoniker": "skills_hub.core\\Repository\\LessonType\\Interfaces\\ILessonTypeService.cs",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Interfaces\\ILessonTypeService.cs",
+              "RelativeToolTip": "skills_hub.core\\Repository\\LessonType\\Interfaces\\ILessonTypeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T11:22:18.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LessonTypeServiceTest.cs",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\LessonTypeServiceTest.cs",
+              "RelativeDocumentMoniker": "skills_hub.tests\\LessonTypeServiceTest.cs",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\LessonTypeServiceTest.cs",
+              "RelativeToolTip": "skills_hub.tests\\LessonTypeServiceTest.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAiwBQAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T09:11:03.042Z",
               "EditorCaption": ""
             },
             {
@@ -64,33 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IAbstractLogModel.cs",
-              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Helpers\\IAbstractLogModel.cs",
-              "RelativeDocumentMoniker": "skills_hub.core\\Helpers\\IAbstractLogModel.cs",
-              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Helpers\\IAbstractLogModel.cs",
-              "RelativeToolTip": "skills_hub.core\\Helpers\\IAbstractLogModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T11:26:05.313Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ILessonTypeService.cs",
-              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Interfaces\\ILessonTypeService.cs",
-              "RelativeDocumentMoniker": "skills_hub.core\\Repository\\LessonType\\Interfaces\\ILessonTypeService.cs",
-              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Interfaces\\ILessonTypeService.cs",
-              "RelativeToolTip": "skills_hub.core\\Repository\\LessonType\\Interfaces\\ILessonTypeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T11:22:18.46Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "UserTest.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\UserTest.cs",
               "RelativeDocumentMoniker": "skills_hub.tests\\UserTest.cs",
@@ -99,19 +112,6 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T09:19:30.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LessonTypeServiceTest.cs",
-              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\LessonTypeServiceTest.cs",
-              "RelativeDocumentMoniker": "skills_hub.tests\\LessonTypeServiceTest.cs",
-              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\LessonTypeServiceTest.cs",
-              "RelativeToolTip": "skills_hub.tests\\LessonTypeServiceTest.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAkwDEAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T09:11:03.042Z",
               "EditorCaption": ""
             }
           ]
