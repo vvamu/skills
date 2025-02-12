@@ -7,7 +7,6 @@ using skills_hub.domain.Models.Groups;
 using skills_hub.domain.Models.LessonTypes;
 using skills_hub.domain.Models.ManyToMany;
 using skills_hub.domain.Models.User;
-using System.Text.RegularExpressions;
 
 namespace skills_hub.persistence;
 
@@ -19,6 +18,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityR
     }
 
     public DbSet<domain.Models.Groups.Group> Groups { get; set; }
+    public DbSet<GroupWorkingDay> GroupWorkingDays { get; set; }
     public DbSet<Lesson> Lessons { get; set; }
 
     public DbSet<LessonType> LessonTypes { get; set; }

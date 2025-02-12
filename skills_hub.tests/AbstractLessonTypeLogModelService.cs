@@ -1,20 +1,9 @@
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Moq;
-using skills_hub.core.Repository.LessonType;
-using skills_hub.domain.Models.LessonTypes;
-using skills_hub.domain.Models.User;
-using skills_hub.persistence;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using System.Security.Claims;
-using AutoMapper;
-using skills_hub.core.Repository.User;
 using skills_hub.core.Helpers;
-using Microsoft.Extensions.DependencyInjection;
-using skills_hub.tests.Helpers;
 using skills_hub.core.Repository.LessonType.Interfaces;
+using skills_hub.domain.Models.LessonTypes;
+using skills_hub.persistence;
 
 namespace skills_hub.tests;
 
@@ -31,7 +20,7 @@ public class AbstractLessonTypeLogModelService : IDisposable
         _mockLessonTypeService = new Mock<ILessonTypeService>(); //new Mock<core.Repository.LessonType.Implementation.LessonTypeService>();
         //_mockLessonTypeService.Setup(x=>x.UpdateAsync())
         _mockLessonTypeService.Setup(x => x.UpdateAsync(It.IsAny<LessonType>(), It.IsAny<Guid[]>()))
-            .ReturnsAsync((LessonType item, Guid[] paymentCategories) =>new LessonType());
+            .ReturnsAsync((LessonType item, Guid[] paymentCategories) => new LessonType());
 
         var dbOptionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>().UseInMemoryDatabase("in_memory_db");
         _db = new ApplicationDbContext(dbOptionsBuilder.Options);
@@ -63,9 +52,9 @@ public class AbstractLessonTypeLogModelService : IDisposable
             items = _ageTypeService.GetCurrentItems().ToList() ?? new();
             Assert.AreEqual(items.Count(), 1);
         }
-        catch (Exception ex) 
+        catch (Exception ex)
         {
-           Assert.Fail(ex.Message);
+            Assert.Fail(ex.Message);
         }
     }
 
@@ -119,16 +108,16 @@ public class AbstractLessonTypeLogModelService : IDisposable
             items = _ageTypeService.GetCurrentItems().ToList();
             var resUpdated = await _ageTypeService.UpdateAsync(new AgeType()
             {
-                Id=resCreated.Id,
+                Id = resCreated.Id,
                 MinimumAge = 18,
                 MaximumAge = 90,
                 Name = "Adults"
             });
-            items = await (await _ageTypeService.GetCurrentItemsWithParents()).ToListAsync();
+            items = await (await _ageTypeService.GetCurrentItemsWithParentsAsync()).ToListAsync();
             var itemUpdated = items.ToList().FirstOrDefault() ?? new AgeType();
             var allItems = await _ageTypeService.GetItems().ToListAsync();
-            
-            
+
+
             Assert.That((itemUpdated.MaximumAge == 90) && (itemUpdated.Parents?.Count() == 1) && allItems.Count == 2);
 
         }
@@ -167,6 +156,6 @@ public class AbstractLessonTypeLogModelService : IDisposable
         }
     }
 
-    
+
 }
 

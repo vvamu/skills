@@ -8,7 +8,7 @@ namespace skills_hub.domain.Models.LessonTypes;
 public class LessonType : LogModel<LessonType>
 {
     public string? Description { get; set; }
-    public bool IsActive { get; set; }
+    public bool IsActive { get; set; } = true;
     public int LessonTimeInMinutes { get; set; }
     public string? FrequencyName { get; set; }
     public int FrequencyValue { get; set; }
@@ -29,11 +29,11 @@ public class LessonType : LogModel<LessonType>
 
     //public int CountScheduleDays { get; set; }
 
-    public bool CheckGroupType { get; set; }
-    public bool CheckAgeType { get; set; }
-    public bool CheckCountScheduleDays { get; set; }
+    public bool CheckGroupType { get; set; } = false;
+    public bool CheckAgeType { get; set; } = false;
+    public bool CheckCountScheduleDays { get; set; } = false;
     [NotMapped]
-    public bool IsUnlimitedLessonsCount { get; set; }
+    public bool IsUnlimitedLessonsCount { get; set; } = false;
 
 
     #region NotMapped
@@ -65,7 +65,7 @@ public class LessonType : LogModel<LessonType>
             return "Не определена";
         }
     }
-
+    [NotMapped]
     public string RuFrequencyName
     {
         get
@@ -99,9 +99,9 @@ public class LessonType : LogModel<LessonType>
             return res;
         }
     }
-
+    [NotMapped]
     public string? DurationText => $"Длительность в {(RuDurationType == "занятие" ? "занятиях" : RuDurationType)} : {DurationTypeValue}";
-
+    [NotMapped]
     public new string? Status
     {
         get

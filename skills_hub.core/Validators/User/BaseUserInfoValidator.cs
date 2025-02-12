@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-
-namespace skills_hub.core.Validators;
+﻿namespace skills_hub.core.Validators;
 
 public class BaseUserInfoValidator : AbstractValidator<BaseUserInfo>
 {

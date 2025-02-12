@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using skills_hub.core.Repository.LessonType.Interfaces;
-using skills_hub.core.Validators;
 
 namespace skills_hub.core.Repository.LessonType;
 
@@ -21,15 +19,15 @@ public class AgeTypeServices : IAgeTypeServices
 
     public async Task<List<AgeType>> GetAllAsync()
     {
-       
+
         return await _context.AgeTypes.ToListAsync();
     }
     public async Task<AgeType> CreateAsync()
     {
         var res = await _context.AgeTypes.AddAsync(new AgeType() { MinimumAge = 1, MaximumAge = 20, Name = "Testing value" });
         _context.SaveChanges();
-        
-        
+
+
 
         return res.Entity;
     }
@@ -58,13 +56,13 @@ public class AgeTypeServices : IAgeTypeServices
     public async Task<List<ApplicationUser>> GetUsersAsync()
     {
         var resUser2 = await _context.Users.ToListAsync();
-        if (resUser2 != null && resUser2.Count>0)
+        if (resUser2 != null && resUser2.Count > 0)
         {
             var userm = await _userManager.GetRolesAsync(resUser2.First());
             var u = userm.ToList();
         }
-        
-        
+
+
         return resUser2;
 
     }

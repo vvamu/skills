@@ -1,18 +1,10 @@
-﻿
-
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Moq;
-using skills_hub.core.Repository.LessonType;
-using skills_hub.domain.Models.LessonTypes;
+using skills_hub.core.Repository.User.Interfaces;
 using skills_hub.domain.Models.User;
 using skills_hub.persistence;
-
 using skills_hub.tests.Helpers;
-using skills_hub.core.Repository.LessonType.Interfaces;
-
-using skills_hub.core.Repository.User.Interfaces;
 
 namespace skills_hub.tests;
 
@@ -46,7 +38,7 @@ public class NotificationServiceTest : IDisposable
     {
         try
         {
-            
+
             //var items = _notificationService.GetCurrentItems().ToList();
             //foreach (var item in items)
             //{

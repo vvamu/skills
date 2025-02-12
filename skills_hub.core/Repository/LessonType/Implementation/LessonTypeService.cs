@@ -79,7 +79,7 @@ public class LessonTypeService : AbstractLogModelService<LessonType>, ILessonTyp
         var payments = await CheckCorrectPaymentCategories(paymentCategories, item.IsActive);
 
         if (!AreObjectsDifferent(olItemDb, item)) return item;
-        
+
         await CheckCorrectActiveProperties(item.AgeTypeId, item.CourseId, item.GroupTypeId, item.LocationId);
         item = await base.UpdateAsync(item);
         return item;

@@ -6,7 +6,6 @@ global using skills_hub.domain.Models.User;
 global using skills_hub.persistence;
 using Microsoft.EntityFrameworkCore;
 using skills_hub.domain;
-using System.ComponentModel.DataAnnotations;
 
 
 namespace skills_hub.core.Helpers;
@@ -35,9 +34,9 @@ public abstract class AbstractLogModelService<T> : IAbstractLogModel<T> where T 
         return items;
     }
 
-    public IQueryable<T> GetItems() => _contextModel;
+    public IQueryable<T> GetItems() => _fullInclude ?? _contextModel;
 
-    public async Task<IQueryable<T>> GetCurrentItemsWithParents()
+    public async Task<IQueryable<T>> GetCurrentItemsWithParentsAsync()
     {
         var items = _contextModel.Where(x => x.ParentId == null || x.ParentId == Guid.Empty);
 
@@ -89,7 +88,7 @@ public abstract class AbstractLogModelService<T> : IAbstractLogModel<T> where T 
         return await GetAsync(itemDb.Id);
     }
 
-    public  async Task<T> RemoveAsync(Guid itemId)
+    public async Task<T> RemoveAsync(Guid itemId)
     {
         var itemDb = _contextModel.FirstOrDefault(x => x.Id == itemId) ?? throw new Exception("No info in database");
         var children = GetAllChildren(itemId).ToList();
@@ -97,7 +96,7 @@ public abstract class AbstractLogModelService<T> : IAbstractLogModel<T> where T 
         if (isHardDelete)
         {
             _contextModel.RemoveRange(children);
-            if(_contextModel is DbSet<LessonType>)
+            if (_contextModel is DbSet<LessonType>)
             {
                 var lessonTypesPayments = _context.LessonTypePaymentCategories.Where(x => x.LessonTypeId == itemId);
                 _context.LessonTypePaymentCategories.RemoveRange(lessonTypesPayments);
@@ -142,7 +141,7 @@ public abstract class AbstractLogModelService<T> : IAbstractLogModel<T> where T 
         var resultSearching = await _contextModel.Where(x => x.Parent == null).ToListAsync();
         //resultSearching = resultSearching.Where(x => !children.Select(x => x.Id).Contains(x.Id)).ToList();
         resultSearching = resultSearching.Where(x => x.Equals(newItem)).ToList();
-        if (resultSearching.Count() > 0  && resultSearching.FirstOrDefault().Id != oldValue.Id) throw new Exception("Entity with those properties already defined");
+        if (resultSearching.Count() > 0 && resultSearching.FirstOrDefault().Id != oldValue.Id) throw new Exception("Entity with those properties already defined");
 
         if (oldValue == null) return;
         var children = GetAllChildren(oldValue.Id).OrderByDescending(x => x.DateCreated).ToList();

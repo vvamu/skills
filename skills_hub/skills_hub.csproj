@@ -24,6 +24,11 @@
     <Folder Include="Views\LessonTypeProperties\PaymentCategory\" />
     <Folder Include="Views\Lesson\" />
     <Folder Include="Views\Home\" />
+    <Folder Include="Heplers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\skills_hub.core\skills_hub.core.csproj" />
   </ItemGroup>
 
 </Project>
