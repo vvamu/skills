@@ -18,7 +18,7 @@ public abstract class AbstractLogModelService<T> : IAbstractLogModel<T> where T 
     protected IValidator<T> _validator { get; set; }
     protected IQueryable<T>? _fullInclude;
 
-    public async Task<T> GetLastValueAsync(Guid? itemId, bool withParents = false)
+    public virtual async Task<T> GetLastValueAsync(Guid? itemId, bool withParents = false)
     {
         if (itemId == Guid.Empty) return new T();
         var res = await GetAsync(itemId, withParents);
@@ -89,28 +89,25 @@ public abstract class AbstractLogModelService<T> : IAbstractLogModel<T> where T 
         return await GetAsync(itemDb.Id);
     }
 
-    public async Task<T> RemoveAsync(Guid itemId)
+    public  async Task<T> RemoveAsync(Guid itemId)
     {
         var itemDb = _contextModel.FirstOrDefault(x => x.Id == itemId) ?? throw new Exception("No info in database");
         var children = GetAllChildren(itemId).ToList();
-
-        //var parents = GetAllChildren(itemId).ToList();
         var isHardDelete = await IsHardDelete(children.AsQueryable());
         if (isHardDelete)
         {
             _contextModel.RemoveRange(children);
-            /*
-            var payments = _context.LessonTypePaymentCategories.Where(x=>x.LessonTypeId == itemId).ToList();
-            _context.LessonTypePaymentCategories.RemoveRange(payments);*/
-
-        }
-        else
-        {
-            itemDb.IsDeleted = true;
-            await UpdateAsync(itemDb);
-            //_contextModel.Update(itemDb);
+            if(_contextModel is DbSet<LessonType>)
+            {
+                var lessonTypesPayments = _context.LessonTypePaymentCategories.Where(x => x.LessonTypeId == itemId);
+                _context.LessonTypePaymentCategories.RemoveRange(lessonTypesPayments);
+                await _context.SaveChangesAsync();
+                return await GetAsync(itemDb.Id);
+            }
         }
 
+        itemDb.IsDeleted = true;
+        await UpdateAsync(itemDb);
         await _context.SaveChangesAsync();
         return await GetAsync(itemDb.Id);
     }

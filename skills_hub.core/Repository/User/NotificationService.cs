@@ -9,16 +9,12 @@ public class NotificationService : INotificationService
 {
     private readonly ApplicationDbContext _context;
     private readonly UserManager<ApplicationUser> _userManager;
-    private readonly IMapper _mapper;
 
-    public NotificationService(ApplicationDbContext context, UserManager<ApplicationUser> userManager, IMapper mapper)
+    public NotificationService(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
     {
         _context = context;
         _userManager = userManager;
-        _mapper = mapper;
     }
-
-
 
     public async Task<NotificationMessage> СreateToEditLesson(Lesson lastLessonValue, Lesson? newlessonValue = null, List<ApplicationUser>? usersToSend = null, int answer = 1)
     {

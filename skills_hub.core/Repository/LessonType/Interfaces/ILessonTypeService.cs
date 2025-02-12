@@ -2,11 +2,11 @@
 
 namespace skills_hub.core.Repository.LessonType.Interfaces;
 
-public interface ILessonTypeService : IAbstractLogModel<LT>
+public interface ILessonTypeService
 {
-    public IQueryable<LT> GetAll();
-
-    public Task<LT>? GetAsync(Guid itemId);
+    public Task<LT> GetLastValueAsync(Guid? itemId, bool withParents = false);
+    public IQueryable<LT> GetItems();
+    public IQueryable<LT> GetCurrentItems();
     public Task<LT> CreateAsync(LT item, Guid[] paymentCategories);
     public Task<LT> UpdateAsync(LT item, Guid[] paymentCategories);
     public Task<LT> RemoveAsync(Guid itemId);

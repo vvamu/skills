@@ -10,59 +10,33 @@ using LessonType = domain.Models.LessonTypes.LessonType;
 //For Admin Panel
 public class LessonTypeService : AbstractLogModelService<LessonType>, ILessonTypeService
 {
-    private readonly INotificationService _notificationService;
+    private readonly INotificationService? _notificationService;
 
-    public LessonTypeService(ApplicationDbContext context, INotificationService notificationService)
+    public LessonTypeService(ApplicationDbContext context, INotificationService notificationService = null)
     {
         _context = context;
         _contextModel = _context.LessonTypes;
         _validator = new LessonTypeValidator();
         _notificationService = notificationService;
-    }
-
-
-    public IQueryable<LessonType> GetAll()
-    {
-        var items = _contextModel
+        _fullInclude = _contextModel
             .Include(x => x.Course)
             .Include(x => x.LessonTypePaymentCategory).ThenInclude(x => x.PaymentCategory)
             .Include(x => x.GroupType)
             .Include(x => x.Location)
             .Include(x => x.AgeType);
-        foreach (var item in items)
-        {
-            //item.Children = GetAllParents((Guid)item.Id).Where(x=>x.Id != item.Id).ToList();
-            //item.Parents = GetAllChildren((Guid)item.Id).Where(x => x.Id != item.Id).ToList();
-
-        }
-
-        return items;
-
     }
 
-    public async Task<LessonType>? GetAsync(Guid itemId)
+    public override async Task<LessonType>? GetLastValueAsync(Guid? itemId, bool withParents = false)
     {
-        var item = await _context.LessonTypes
-            .Include(x => x.Course)
-            .Include(x => x.LessonTypePaymentCategory).ThenInclude(x => x.PaymentCategory)
-            .Include(x => x.GroupType)
-            .Include(x => x.Location)
-            .Include(x => x.AgeType)
-            .FirstOrDefaultAsync(x => x.Id == itemId);
+        var item = await _fullInclude.FirstOrDefaultAsync(x => x.Id == itemId);
+        if (!withParents) return item ?? throw new Exception("Not found");
 
         //item.Children = GetAllParents((Guid)item.Id).Where(x => x.Id != item.Id).ToList();
         item.Parents = GetAllChildren(item.Id).Where(x => x.Id != item.Id).ToList();
 
         for (int i = 0; i < item.Parents.Count; i++)
         {
-            item.Parents[i] = await _context.LessonTypes
-                .Include(x => x.Course)
-                .Include(x => x.LessonTypePaymentCategory).ThenInclude(x => x.PaymentCategory)
-                .Include(x => x.GroupType)
-                .Include(x => x.Location)
-                .Include(x => x.AgeType)
-                .Include(x => x.Groups)
-                .FirstOrDefaultAsync(x => x.Id == item.Parents[i].Id);
+            item.Parents[i] = await _fullInclude.FirstOrDefaultAsync(x => x.Id == item.Parents[i].Id);
         }
 
         return item ?? throw new Exception("Not found");
@@ -99,42 +73,33 @@ public class LessonTypeService : AbstractLogModelService<LessonType>, ILessonTyp
         return res;
 
     }
-
-
-    public async Task<LessonType> RestoreAsync(Guid itemId)
-    {
-        return await base.RestoreAsync(itemId);
-    }
-
     public async Task<LessonType> UpdateAsync(LessonType item, Guid[] paymentCategories)
     {
         var olItemDb = await GetAsync(item.Id) ?? throw new Exception("Lesson type not found");
         var payments = await CheckCorrectPaymentCategories(paymentCategories, item.IsActive);
 
-        if (AreObjectsDifferent(olItemDb, item))
-        {
-            await CheckCorrectActiveProperties(item.AgeTypeId, item.CourseId, item.GroupTypeId, item.LocationId);
-            item = await base.UpdateAsync(item);
-        }
-        //var oldLessonTypeStudents = await _context.LessonTypeStudents.Where(x => x.LessonTypeId == item.Id).ToListAsync();
-        //var oldLessonTypeTeachers = await _context.LessonTypeTeachers.Where(x => x.LessonTypeId == item.Id).ToListAsync();
-
-
-        ////var itemDb = await GetAsync(item.Id);
-
-        //var lessonTypePayments = payments.Select(x => new LessonTypePaymentCategory() { PaymentCategoryId = x.Id, LessonTypeId = item.Id });
-        //var lessonTypeStudents = oldLessonTypeStudents.Select(x => new LessonTypeStudent() { StudentId = x.StudentId, LessonTypeId = item.Id });
-        //var lessonTypeTeachers = oldLessonTypeTeachers.Select(x => new LessonTypeTeacher() { TeacherId = x.TeacherId, LessonTypeId = item.Id });
-
-        //await _context.LessonTypePaymentCategories.AddRangeAsync(lessonTypePayments);
-        //await _context.SaveChangesAsync();
-        //await _context.LessonTypeStudents.AddRangeAsync(lessonTypeStudents);
-        //await _context.SaveChangesAsync();
-        //await _context.LessonTypeTeachers.AddRangeAsync(lessonTypeTeachers);
-        //await _context.SaveChangesAsync();
-
-
+        if (!AreObjectsDifferent(olItemDb, item)) return item;
+        
+        await CheckCorrectActiveProperties(item.AgeTypeId, item.CourseId, item.GroupTypeId, item.LocationId);
+        item = await base.UpdateAsync(item);
+        return item;
         /*
+        var oldLessonTypeStudents = await _context.LessonTypeStudents.Where(x => x.LessonTypeId == item.Id).ToListAsync();
+        var oldLessonTypeTeachers = await _context.LessonTypeTeachers.Where(x => x.LessonTypeId == item.Id).ToListAsync();
+
+        //var itemDb = await GetAsync(item.Id);
+
+        var lessonTypePayments = payments.Select(x => new LessonTypePaymentCategory() { PaymentCategoryId = x.Id, LessonTypeId = item.Id });
+        var lessonTypeStudents = oldLessonTypeStudents.Select(x => new LessonTypeStudent() { StudentId = x.StudentId, LessonTypeId = item.Id });
+        var lessonTypeTeachers = oldLessonTypeTeachers.Select(x => new LessonTypeTeacher() { TeacherId = x.TeacherId, LessonTypeId = item.Id });
+
+        await _context.LessonTypePaymentCategories.AddRangeAsync(lessonTypePayments);
+        await _context.SaveChangesAsync();
+        await _context.LessonTypeStudents.AddRangeAsync(lessonTypeStudents);
+        await _context.SaveChangesAsync();
+        await _context.LessonTypeTeachers.AddRangeAsync(lessonTypeTeachers);
+        await _context.SaveChangesAsync();
+
         var oldPayemntCatogories = olItemDb?.LessonTypePaymentCategory?.Where(x=>x.PaymentCategoryId != null).Select(x=>x.PaymentCategoryId ?? Guid.Empty).ToList() ?? new List<Guid>(); 
         var toUpdate = paymentCategories.Intersect(oldPayemntCatogories).ToList();
         var toCreate = paymentCategories.Except(oldPayemntCatogories).ToList();
@@ -154,33 +119,11 @@ public class LessonTypeService : AbstractLogModelService<LessonType>, ILessonTyp
             _context.LessonTypePaymentCategories.Update(update);
             
         }
-        */
-        //await _context.SaveChangesAsync();
-
-        return item;
-
-    }
-
-
-    public async Task<LessonType> RemoveAsync(Guid itemId)
-    {
-        var item = await _contextModel.FindAsync(itemId);
-        item.IsActive = false;
-        _contextModel.Update(item);
         await _context.SaveChangesAsync();
+        */
 
-        var res = await base.RemoveAsync(itemId);
 
-        var parents = GetAllChildren(itemId);
-        var isHard = await IsHardDelete(parents.AsQueryable());
-        if (isHard)
-        {
-            var lessonTypesPayments = _context.LessonTypePaymentCategories.Where(x => x.LessonTypeId == itemId);
-            _context.LessonTypePaymentCategories.RemoveRange(lessonTypesPayments);
-            await _context.SaveChangesAsync();
-        }
 
-        return res;
 
     }
 

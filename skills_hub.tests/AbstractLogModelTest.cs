@@ -18,7 +18,7 @@ using skills_hub.core.Repository.LessonType.Interfaces;
 
 namespace skills_hub.tests;
 
-public class AbstractModelTest : IDisposable
+public class AbstractLogModelTest : IDisposable
 {
     private ApplicationDbContext? _db;
     private IAbstractLogModel<BaseUserInfo> _baseUserInfoService;
@@ -37,6 +37,29 @@ public class AbstractModelTest : IDisposable
     {
         _db.Dispose();
     }
+
+    [Test]
+    public async Task GetLastValue_BaseUserInfo()
+    {
+        try
+        {
+
+            await Update_BaseUserInfo();
+
+            var items = await _baseUserInfoService.GetCurrentItemsWithParents();
+            var parent = items?.FirstOrDefault()?.Parents?.FirstOrDefault();
+            var curVal = items.FirstOrDefault();
+            var tryGetLastVal = await _baseUserInfoService.GetLastValueAsync(parent?.Id);
+
+
+            Assert.AreEqual(curVal.Id ,tryGetLastVal.Id);
+        }
+        catch (Exception ex)
+        {
+            Assert.Fail(ex.Message);
+        }
+    }
+
     [Test]
     public async Task Create_BaseUserInfo()
     {
