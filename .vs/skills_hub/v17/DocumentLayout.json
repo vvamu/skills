@@ -428,7 +428,7 @@
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\User\\BaseUserInfoService.cs",
               "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\User\\BaseUserInfoService.cs",
               "RelativeToolTip": "skills_hub.core\\Repository\\User\\BaseUserInfoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T15:56:59.796Z"
             },
@@ -464,9 +464,23 @@
               "RelativeDocumentMoniker": "skills_hub.tests\\LessonTypeServiceTest.cs",
               "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\LessonTypeServiceTest.cs",
               "RelativeToolTip": "skills_hub.tests\\LessonTypeServiceTest.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAiwBQAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAADwvwwAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T09:11:03.042Z"
+              "WhenOpened": "2025-02-12T09:11:03.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PaymentCategoryService.cs",
+              "DocumentMoniker": "D:\\work\\2025\\skills\\skills_hub.core\\Repository\\LessonType\\Implementation\\PaymentCategoryService.cs",
+              "RelativeDocumentMoniker": "skills_hub.core\\Repository\\LessonType\\Implementation\\PaymentCategoryService.cs",
+              "ToolTip": "D:\\work\\2025\\skills\\skills_hub.core\\Repository\\LessonType\\Implementation\\PaymentCategoryService.cs",
+              "RelativeToolTip": "skills_hub.core\\Repository\\LessonType\\Implementation\\PaymentCategoryService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T16:54:35.862Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
