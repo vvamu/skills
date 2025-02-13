@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\skills_hub.csproj": {}
+    "D:\\work\\2025\\skills\\skills_hub\\skills_hub.csproj": {}
   },
   "projects": {
-    "D:\\nadezhda\\own\\projects\\skills_hub\\EmailProvider\\EmailProvider.csproj": {
+    "D:\\work\\2025\\skills\\EmailProvider\\EmailProvider.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\nadezhda\\own\\projects\\skills_hub\\EmailProvider\\EmailProvider.csproj",
+        "projectUniqueName": "D:\\work\\2025\\skills\\EmailProvider\\EmailProvider.csproj",
         "projectName": "EmailProvider",
-        "projectPath": "D:\\nadezhda\\own\\projects\\skills_hub\\EmailProvider\\EmailProvider.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\nadezhda\\own\\projects\\skills_hub\\EmailProvider\\obj\\",
+        "projectPath": "D:\\work\\2025\\skills\\EmailProvider\\EmailProvider.csproj",
+        "packagesPath": "C:\\Users\\who\\.nuget\\packages\\",
+        "outputPath": "D:\\work\\2025\\skills\\EmailProvider\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\who\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -83,24 +84,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400-preview.0.24324.5/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200-preview.0.25057.12/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\skills_hub.core.csproj": {
+    "D:\\work\\2025\\skills\\skills_hub.core\\skills_hub.core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\skills_hub.core.csproj",
+        "projectUniqueName": "D:\\work\\2025\\skills\\skills_hub.core\\skills_hub.core.csproj",
         "projectName": "skills_hub.core",
-        "projectPath": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\skills_hub.core.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\obj\\",
+        "projectPath": "D:\\work\\2025\\skills\\skills_hub.core\\skills_hub.core.csproj",
+        "packagesPath": "C:\\Users\\who\\.nuget\\packages\\",
+        "outputPath": "D:\\work\\2025\\skills\\skills_hub.core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\who\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -116,8 +117,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.persistence\\skills_hub.persistence.csproj": {
-                "projectPath": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.persistence\\skills_hub.persistence.csproj"
+              "D:\\work\\2025\\skills\\skills_hub.persistence\\skills_hub.persistence.csproj": {
+                "projectPath": "D:\\work\\2025\\skills\\skills_hub.persistence\\skills_hub.persistence.csproj"
               }
             }
           }
@@ -131,7 +132,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -152,24 +154,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400-preview.0.24324.5/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200-preview.0.25057.12/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\skills_hub.domain.csproj": {
+    "D:\\work\\2025\\skills\\skills_hub.domain\\skills_hub.domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\skills_hub.domain.csproj",
+        "projectUniqueName": "D:\\work\\2025\\skills\\skills_hub.domain\\skills_hub.domain.csproj",
         "projectName": "skills_hub.domain",
-        "projectPath": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\skills_hub.domain.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\obj\\",
+        "projectPath": "D:\\work\\2025\\skills\\skills_hub.domain\\skills_hub.domain.csproj",
+        "packagesPath": "C:\\Users\\who\\.nuget\\packages\\",
+        "outputPath": "D:\\work\\2025\\skills\\skills_hub.domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\who\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -196,7 +198,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -271,24 +274,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400-preview.0.24324.5/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200-preview.0.25057.12/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.persistence\\skills_hub.persistence.csproj": {
+    "D:\\work\\2025\\skills\\skills_hub.persistence\\skills_hub.persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.persistence\\skills_hub.persistence.csproj",
+        "projectUniqueName": "D:\\work\\2025\\skills\\skills_hub.persistence\\skills_hub.persistence.csproj",
         "projectName": "skills_hub.persistence",
-        "projectPath": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.persistence\\skills_hub.persistence.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.persistence\\obj\\",
+        "projectPath": "D:\\work\\2025\\skills\\skills_hub.persistence\\skills_hub.persistence.csproj",
+        "packagesPath": "C:\\Users\\who\\.nuget\\packages\\",
+        "outputPath": "D:\\work\\2025\\skills\\skills_hub.persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\who\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -304,8 +307,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\skills_hub.domain.csproj": {
-                "projectPath": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.domain\\skills_hub.domain.csproj"
+              "D:\\work\\2025\\skills\\skills_hub.domain\\skills_hub.domain.csproj": {
+                "projectPath": "D:\\work\\2025\\skills\\skills_hub.domain\\skills_hub.domain.csproj"
               }
             }
           }
@@ -319,7 +322,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -356,24 +360,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400-preview.0.24324.5/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200-preview.0.25057.12/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\skills_hub.csproj": {
+    "D:\\work\\2025\\skills\\skills_hub\\skills_hub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\skills_hub.csproj",
+        "projectUniqueName": "D:\\work\\2025\\skills\\skills_hub\\skills_hub.csproj",
         "projectName": "skills_hub",
-        "projectPath": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\skills_hub.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\obj\\",
+        "projectPath": "D:\\work\\2025\\skills\\skills_hub\\skills_hub.csproj",
+        "packagesPath": "C:\\Users\\who\\.nuget\\packages\\",
+        "outputPath": "D:\\work\\2025\\skills\\skills_hub\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\who\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -389,11 +393,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\nadezhda\\own\\projects\\skills_hub\\EmailProvider\\EmailProvider.csproj": {
-                "projectPath": "D:\\nadezhda\\own\\projects\\skills_hub\\EmailProvider\\EmailProvider.csproj"
+              "D:\\work\\2025\\skills\\EmailProvider\\EmailProvider.csproj": {
+                "projectPath": "D:\\work\\2025\\skills\\EmailProvider\\EmailProvider.csproj"
               },
-              "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\skills_hub.core.csproj": {
-                "projectPath": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\skills_hub.core.csproj"
+              "D:\\work\\2025\\skills\\skills_hub.core\\skills_hub.core.csproj": {
+                "projectPath": "D:\\work\\2025\\skills\\skills_hub.core\\skills_hub.core.csproj"
               }
             }
           }
@@ -407,7 +411,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -459,7 +464,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400-preview.0.24324.5/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200-preview.0.25057.12/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
