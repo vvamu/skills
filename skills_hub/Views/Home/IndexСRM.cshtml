@@ -1,0 +1,266 @@
+﻿@using skills_hub.domain.Base;
+@inject skills_hub.persistence.ApplicationDbContext _context;
+
+@{
+    var users = _context.Users.Where(x => !x.IsDeleted).ToList();
+    var lessonTypes = _context.LessonTypes.Where(x => x.ParentId == null).Where(x => !x.IsDeleted).ToList();
+    var lessons = _context.Lessons.Where(x => x.ParentId == null).Where(x => !x.IsDeleted).ToList();
+    var groups = _context.Groups.Where(x => !x.IsDeleted).ToList();
+}
+
+<div>
+
+    <!--**********************************
+        Content body start
+    ***********************************-->
+    <div>
+
+        <div class="container-fluid mt-3">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card gradient-1">
+                        <div class="card-body">
+                            <h3 class="card-title text-white">Пользователи </h3>
+                            @{
+                                string newUserString = "";
+                                _context.BaseUserInfo.ToList();
+                                //var newUsers = users.Where(x => (DateTime.Now.Day - x.RegistrationDate.Value.Day) <= 10 && x.RegistrationDate.Value.Year == DateTime.Now.Year && x.RegistrationDate.Value.Month == DateTime.Now.Month).Count();
+                                //if (newUsers > 0)
+                                //   newUserString += "+" + newUsers + " by month";
+                            }
+
+                            <div class="d-inline-block">
+                                <h2 class="text-white">@users.Count() <span style="font-size:small">@newUserString</span> </h2>
+                            </div>
+                            <span class="float-right display-5 opacity-5">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M219.3 .5c3.1-.6 6.3-.6 9.4 0l200 40C439.9 42.7 448 52.6 448 64s-8.1 21.3-19.3 23.5L352 102.9V160c0 70.7-57.3 128-128 128s-128-57.3-128-128V102.9L48 93.3v65.1l15.7 78.4c.9 4.7-.3 9.6-3.3 13.3s-7.6 5.9-12.4 5.9H16c-4.8 0-9.3-2.1-12.4-5.9s-4.3-8.6-3.3-13.3L16 158.4V86.6C6.5 83.3 0 74.3 0 64C0 52.6 8.1 42.7 19.3 40.5l200-40zM111.9 327.7c10.5-3.4 21.8 .4 29.4 8.5l71 75.5c6.3 6.7 17 6.7 23.3 0l71-75.5c7.6-8.1 18.9-11.9 29.4-8.5C401 348.6 448 409.4 448 481.3c0 17-13.8 30.7-30.7 30.7H30.7C13.8 512 0 498.2 0 481.3c0-71.9 47-132.7 111.9-153.6z" /></svg>
+                            </span>
+
+                            <br /><span><strong>Учителя:</strong> @users.Where(x => x.UserTeacher != null).Count() | <strong>Активные учителя:</strong> @users.Where(x => x.UserTeacher != null && !x.UserTeacher.IsDeleted).Count()  </span><br />
+                            <span>Студенты: @users.Where(x => x.UserStudent != null).Count() | Активные студенты: @users.Where(x => x.UserStudent != null && !x.UserStudent.IsDeleted).Count()</span>
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card gradient-1">
+                        <div class="card-body">
+                            <h3 class="card-title text-white">Teachers</h3>
+                            <div class="d-inline-block">
+                                <h2 class="text-white">Model.TotalTeachers</h2>
+                            </div>
+                            <span class="float-right display-5 opacity-5">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M219.3 .5c3.1-.6 6.3-.6 9.4 0l200 40C439.9 42.7 448 52.6 448 64s-8.1 21.3-19.3 23.5L352 102.9V160c0 70.7-57.3 128-128 128s-128-57.3-128-128V102.9L48 93.3v65.1l15.7 78.4c.9 4.7-.3 9.6-3.3 13.3s-7.6 5.9-12.4 5.9H16c-4.8 0-9.3-2.1-12.4-5.9s-4.3-8.6-3.3-13.3L16 158.4V86.6C6.5 83.3 0 74.3 0 64C0 52.6 8.1 42.7 19.3 40.5l200-40zM111.9 327.7c10.5-3.4 21.8 .4 29.4 8.5l71 75.5c6.3 6.7 17 6.7 23.3 0l71-75.5c7.6-8.1 18.9-11.9 29.4-8.5C401 348.6 448 409.4 448 481.3c0 17-13.8 30.7-30.7 30.7H30.7C13.8 512 0 498.2 0 481.3c0-71.9 47-132.7 111.9-153.6z"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card gradient-2">
+                        <div class="card-body">
+                            <h3 class="card-title text-white">Students</h3>
+                            <div class="d-inline-block">
+                                <h2 class="text-white">Model.TotalStudents</h2>
+                            </div>
+                            <span class="float-right display-5 opacity-5">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card gradient-3">
+                        <div class="card-body">
+                            <h3 class="card-title text-white">Занятия</h3>
+                            <div class="d-inline-block">
+                                <h2 class="text-white">@_context.Lessons.Where(x => x.ParentId == null).Count() </h2>
+                            </div>
+                            <span class="float-right display-5 opacity-5">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><path d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h89.9c-6.3-10.2-9.9-22.2-9.9-35.1c0-46.9 25.8-87.8 64-109.2V271.8 48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zM272 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zM576 272a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM352 477.1c0 19.3 15.6 34.9 34.9 34.9H605.1c19.3 0 34.9-15.6 34.9-34.9c0-51.4-41.7-93.1-93.1-93.1H445.1c-51.4 0-93.1 41.7-93.1 93.1z" /></svg>
+                            </span>
+
+                            <br /><span>За год: @lessons.Where(x => x.EndTime.Year == DateTime.Now.Year).Count() </span><br />
+                            <span>За месяц: @lessons.Where(x => x.EndTime.Year == DateTime.Now.Year && x.EndTime.Month == DateTime.Now.Month).Count()</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card gradient-4">
+                        <div class="card-body">
+                            <h3 class="card-title text-white">Категории занятий</h3>
+                            @{
+                                string newCourcesString = "";
+                                //var newCourcess = _context.ApplicationUsers.Where(x => (DateTime.Now.Day - x.RegistrationDate.Value.Day) <= 10 && x.RegistrationDate.Value.Year == DateTime.Now.Year && x.RegistrationDate.Value.Month == DateTime.Now.Month).Count();
+                                //if (newCourcess > 0)
+                                //   newCourcesString += "+" + newUsers + " by month";
+
+                            }
+                            <div class="d-inline-block">
+                                <h2 class="text-white">@lessonTypes.Count() <span style="font-size:small"></span></h2>
+                            </div>
+                            <span class="float-right display-5 opacity-5"><i class="fa fa-heart"></i></span>
+                            </span>
+                            <br /><span>За месяц: @lessonTypes.Where(x => x.DateCreated.Month <= DateTime.Now.Month).Count() </span><br />
+                            <span>Последняя отредактирована: @lessonTypes.OrderBy(x => x.DateCreated)?.FirstOrDefault()?.Name - @_context?.LessonTypes?.OrderBy(x => x.DateCreated)?.FirstOrDefault()?.DateCreated</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card gradient-4">
+                        <div class="card-body">
+                            <h3 class="card-title text-white">Группы</h3>
+                            @{
+                                string newGroupString = "";
+                                var newGroups = groups.Where(x => x.DateStart.Month == DateTime.Now.Month).Count();//_context.ApplicationUsers.Where(x => (DateTime.Now.Day - x.RegistrationDate.Day) <= 10 && x.RegistrationDate.Year == DateTime.Now.Year && x.RegistrationDate.Month == DateTime.Now.Month).Count();
+                                                                                                                   //if (newGroups > 0)
+                                                                                                                   //  newGroupString += "+" + newUsers + " by month";
+                            }
+                            <div class="d-inline-block">
+                                <h2 class="text-white">@groups.Count() @if (newGroups != 0)
+                                    {
+                                        <span style="font-size:small"> </span>
+                                    }</h2>
+                            </div>
+                            <span class="float-right display-5 opacity-5"><i class="fa fa-heart"></i></span>
+                            </span>
+                            <br /><span>За месяц: @newGroups</span><br />
+                            <span>Последняя создана: @groups?.OrderBy(x => x.DateCreated)?.FirstOrDefault()?.Name - @groups?.OrderBy(x => x.DateCreated)?.FirstOrDefault()?.DateCreated</span>
+                        </div>
+                    </div>
+                </div>
+                @if (!User.IsInRole("Admin"))
+                {
+
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-4">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Mails</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white">@ViewBag.CountMails</h2>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-heart"></i></span>
+                                <br /><span>By Year: @_context.EmailMessages.Where(x => x.DateCreated.Year == DateTime.Now.Year).Count() </span><br />
+                                <span>By Month: @_context.Lessons.Where(x => x.DateCreated.Year == DateTime.Now.Year && x.EndTime.Month == DateTime.Now.Month).Count()</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card " style="background-color:gray">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">X</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white">0</h2>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-heart"></i></span>
+                                <br /><span>By Day: X </span><br />
+                                <span>By Month: X</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card " style="background-color:gray">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Telegram Mails</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white">Off</h2>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-heart"></i></span>
+                                <br /><span>By Year: X </span><br />
+                                <span>By Month: X</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-4">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Mails</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white">Группы</h2>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card " style="background-color:gray">
+
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Users with debt</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white">100$</h2>
+                                </div>
+                                <br /><span>All: @_context.Lessons.Where(x => x.EndTime.Year == DateTime.Now.Year).Count() </span><br />
+                                <span>By Month: @_context.Lessons.Where(x => x.EndTime.Year == DateTime.Now.Year && x.EndTime.Month == DateTime.Now.Month).Count()</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card " style="background-color:gray">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Total sum to Teachers</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white">100$</h2>
+                                    (Продажи, зп)
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card " style="background-color:gray">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Total sum to Students</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white">100$</h2>
+                                    (Продажи, зп)
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card " style="background-color:gray">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Total revenue</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white">100$</h2>
+                                    (Продажи, зп)
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card " style="background-color:gray">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Total price for advertising</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white">100$</h2>
+                                    Х
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+        <!-- #/ container -->
+    </div>
+
+
+
+</div>

@@ -11,11 +11,12 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-skills_hub-eef279f1-84f0-4c2d-8650-fba000e23396")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("skills_hub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+981290903e93e972c77e652fbc9dcf3ef51b8aa7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55726fb96a0e43dd1b2b46a6398d213d11699c8e")]
 [assembly: System.Reflection.AssemblyProductAttribute("skills_hub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("skills_hub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -75,6 +75,19 @@
           }
         }
       },
+      "BouncyCastle.Cryptography/2.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Cloudmersive.APIClient.NET.NLP/4.0.9": {
         "type": "package",
         "dependencies": {
@@ -126,6 +139,22 @@
         },
         "runtime": {
           "lib/netstandard1.6/JsonSubTypes.dll": {}
+        }
+      },
+      "MailKit/4.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MimeKit": "4.2.0"
+        },
+        "compile": {
+          "lib/net6.0/MailKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/MailKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
         }
       },
       "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
@@ -337,18 +366,19 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "Microsoft.AspNetCore.Http.Features/5.0.17": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "2.2.0"
+          "Microsoft.Extensions.Primitives": "5.0.1",
+          "System.IO.Pipelines": "5.0.2"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
             "related": ".xml"
           }
         }
@@ -1474,6 +1504,13 @@
           }
         }
       },
+      "Microsoft.TypeScript.MSBuild/5.7.3": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.TypeScript.MSBuild.props": {},
+          "build/Microsoft.TypeScript.MSBuild.targets": {}
+        }
+      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1506,6 +1543,25 @@
           "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
             "assetType": "runtime",
             "rid": "win"
+          }
+        }
+      },
+      "MimeKit/4.2.0": {
+        "type": "package",
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.2.1",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "System.Security.Cryptography.Pkcs": "7.0.2",
+          "System.Text.Encoding.CodePages": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0/MimeKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/MimeKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
           }
         }
       },
@@ -2098,17 +2154,20 @@
           }
         }
       },
-      "System.Formats.Asn1/5.0.0": {
+      "System.Formats.Asn1/7.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/_._": {
+          "lib/net7.0/System.Formats.Asn1.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/System.Formats.Asn1.dll": {
+          "lib/net7.0/System.Formats.Asn1.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "System.Globalization/4.3.0": {
@@ -2954,6 +3013,31 @@
           }
         }
       },
+      "System.Security.Cryptography.Pkcs/7.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Formats.Asn1": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/System.Security.Cryptography.Pkcs.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Security.Cryptography.Pkcs.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net7.0/System.Security.Cryptography.Pkcs.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Security.Cryptography.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3095,26 +3179,23 @@
           }
         }
       },
-      "System.Text.Encoding.CodePages/6.0.0": {
+      "System.Text.Encoding.CodePages/7.0.0": {
         "type": "package",
-        "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-        },
         "compile": {
-          "lib/net6.0/System.Text.Encoding.CodePages.dll": {
+          "lib/net7.0/System.Text.Encoding.CodePages.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/System.Text.Encoding.CodePages.dll": {
+          "lib/net7.0/System.Text.Encoding.CodePages.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
+          "buildTransitive/net6.0/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.dll": {
+          "runtimes/win/lib/net7.0/System.Text.Encoding.CodePages.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -3328,6 +3409,22 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "EmailProvider/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MailKit": "4.2.0",
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
+          "Microsoft.Extensions.Options": "7.0.0",
+          "MimeKit": "4.2.0"
+        },
+        "compile": {
+          "bin/placeholder/EmailProvider.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EmailProvider.dll": {}
+        }
+      },
       "skills_hub.core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -3452,6 +3549,26 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
+    "BouncyCastle.Cryptography/2.2.1": {
+      "sha512": "A6Zr52zVqJKt18ZBsTnX0qhG0kwIQftVAjLmszmkiR/trSp8H+xj1gUOzk7XHwaKgyREMSV1v9XaKrBUeIOdvQ==",
+      "type": "package",
+      "path": "bouncycastle.cryptography/2.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "bouncycastle.cryptography.2.2.1.nupkg.sha512",
+        "bouncycastle.cryptography.nuspec",
+        "lib/net461/BouncyCastle.Cryptography.dll",
+        "lib/net461/BouncyCastle.Cryptography.xml",
+        "lib/net6.0/BouncyCastle.Cryptography.dll",
+        "lib/net6.0/BouncyCastle.Cryptography.xml",
+        "lib/netstandard2.0/BouncyCastle.Cryptography.dll",
+        "lib/netstandard2.0/BouncyCastle.Cryptography.xml",
+        "packageIcon.png"
+      ]
+    },
     "Cloudmersive.APIClient.NET.NLP/4.0.9": {
       "sha512": "J8BdaT0pCojaXL81haIX/sYZfo1VvwhzTgwvF14RKJGO5Dnh1tWVvSdxHnIbp/8xbWwsZZb6WFiYV6GIus1vcg==",
       "type": "package",
@@ -3570,6 +3687,43 @@
         "lib/netstandard1.4/JsonSubTypes.dll",
         "lib/netstandard1.5/JsonSubTypes.dll",
         "lib/netstandard1.6/JsonSubTypes.dll"
+      ]
+    },
+    "MailKit/4.2.0": {
+      "sha512": "NXm66YkEHyLXSyH1Ga/dUS8SB0vYTlGESUluLULa7pG0/eK8c/R9JzMyH0KbKQsgpLGwbji9quAlrcUOL0OjPA==",
+      "type": "package",
+      "path": "mailkit/4.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "docs/README.md",
+        "icons/mailkit-50.png",
+        "lib/net462/MailKit.dll",
+        "lib/net462/MailKit.dll.config",
+        "lib/net462/MailKit.pdb",
+        "lib/net462/MailKit.xml",
+        "lib/net47/MailKit.dll",
+        "lib/net47/MailKit.dll.config",
+        "lib/net47/MailKit.pdb",
+        "lib/net47/MailKit.xml",
+        "lib/net48/MailKit.dll",
+        "lib/net48/MailKit.dll.config",
+        "lib/net48/MailKit.pdb",
+        "lib/net48/MailKit.xml",
+        "lib/net6.0/MailKit.dll",
+        "lib/net6.0/MailKit.dll.config",
+        "lib/net6.0/MailKit.pdb",
+        "lib/net6.0/MailKit.xml",
+        "lib/netstandard2.0/MailKit.dll",
+        "lib/netstandard2.0/MailKit.dll.config",
+        "lib/netstandard2.0/MailKit.pdb",
+        "lib/netstandard2.0/MailKit.xml",
+        "lib/netstandard2.1/MailKit.dll",
+        "lib/netstandard2.1/MailKit.dll.config",
+        "lib/netstandard2.1/MailKit.pdb",
+        "lib/netstandard2.1/MailKit.xml",
+        "mailkit.4.2.0.nupkg.sha512",
+        "mailkit.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
@@ -3742,16 +3896,22 @@
         "microsoft.aspnetcore.http.extensions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http.Features/2.2.0": {
-      "sha512": "ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
+    "Microsoft.AspNetCore.Http.Features/5.0.17": {
+      "sha512": "3jG2xS+dx8DDCGV/F+STdPTg89lX3ao3dF/VEPvJaz3wzBIjuadipTtYNEXDIVuOPZwb6jdmhrX9jkzOIBm5cw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http.features/2.2.0",
+      "path": "microsoft.aspnetcore.http.features/5.0.17",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/net461/Microsoft.AspNetCore.Http.Features.xml",
+        "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/net5.0/Microsoft.AspNetCore.Http.Features.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
-        "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
         "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
@@ -5447,6 +5607,160 @@
         "microsoft.sqlserver.server.nuspec"
       ]
     },
+    "Microsoft.TypeScript.MSBuild/5.7.3": {
+      "sha512": "+PmqBHydxo7mcLF8IZX5EXWO9xN65ln66ruistGw4qvxtSARliPyADOEBxmwK0IJJobYT2zhJVf/ohepjS3elA==",
+      "type": "package",
+      "path": "microsoft.typescript.msbuild/5.7.3",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "build/Microsoft.TypeScript.MSBuild.props",
+        "build/Microsoft.TypeScript.MSBuild.targets",
+        "microsoft.typescript.msbuild.5.7.3.nupkg.sha512",
+        "microsoft.typescript.msbuild.nuspec",
+        "tools/Microsoft.TypeScript.Default.props",
+        "tools/Microsoft.TypeScript.targets",
+        "tools/TypeScriptProjectProperties.xaml",
+        "tools/net45/System.IO.FileSystem.Primitives.dll",
+        "tools/net45/System.IO.FileSystem.dll",
+        "tools/net45/TypeScript.Tasks.dll",
+        "tools/netstandard1.3/TypeScript.Tasks.dll",
+        "tools/tsc/_tsc.js",
+        "tools/tsc/_tsserver.js",
+        "tools/tsc/_typingsInstaller.js",
+        "tools/tsc/cancellationToken.js",
+        "tools/tsc/cs/diagnosticMessages.generated.json",
+        "tools/tsc/de/diagnosticMessages.generated.json",
+        "tools/tsc/en/diagnosticMessages.generated.json",
+        "tools/tsc/es/diagnosticMessages.generated.json",
+        "tools/tsc/fr/diagnosticMessages.generated.json",
+        "tools/tsc/it/diagnosticMessages.generated.json",
+        "tools/tsc/ja/diagnosticMessages.generated.json",
+        "tools/tsc/ko/diagnosticMessages.generated.json",
+        "tools/tsc/lib.d.ts",
+        "tools/tsc/lib.decorators.d.ts",
+        "tools/tsc/lib.decorators.legacy.d.ts",
+        "tools/tsc/lib.dom.asynciterable.d.ts",
+        "tools/tsc/lib.dom.d.ts",
+        "tools/tsc/lib.dom.iterable.d.ts",
+        "tools/tsc/lib.es2015.collection.d.ts",
+        "tools/tsc/lib.es2015.core.d.ts",
+        "tools/tsc/lib.es2015.d.ts",
+        "tools/tsc/lib.es2015.generator.d.ts",
+        "tools/tsc/lib.es2015.iterable.d.ts",
+        "tools/tsc/lib.es2015.promise.d.ts",
+        "tools/tsc/lib.es2015.proxy.d.ts",
+        "tools/tsc/lib.es2015.reflect.d.ts",
+        "tools/tsc/lib.es2015.symbol.d.ts",
+        "tools/tsc/lib.es2015.symbol.wellknown.d.ts",
+        "tools/tsc/lib.es2016.array.include.d.ts",
+        "tools/tsc/lib.es2016.d.ts",
+        "tools/tsc/lib.es2016.full.d.ts",
+        "tools/tsc/lib.es2016.intl.d.ts",
+        "tools/tsc/lib.es2017.arraybuffer.d.ts",
+        "tools/tsc/lib.es2017.d.ts",
+        "tools/tsc/lib.es2017.date.d.ts",
+        "tools/tsc/lib.es2017.full.d.ts",
+        "tools/tsc/lib.es2017.intl.d.ts",
+        "tools/tsc/lib.es2017.object.d.ts",
+        "tools/tsc/lib.es2017.sharedmemory.d.ts",
+        "tools/tsc/lib.es2017.string.d.ts",
+        "tools/tsc/lib.es2017.typedarrays.d.ts",
+        "tools/tsc/lib.es2018.asyncgenerator.d.ts",
+        "tools/tsc/lib.es2018.asynciterable.d.ts",
+        "tools/tsc/lib.es2018.d.ts",
+        "tools/tsc/lib.es2018.full.d.ts",
+        "tools/tsc/lib.es2018.intl.d.ts",
+        "tools/tsc/lib.es2018.promise.d.ts",
+        "tools/tsc/lib.es2018.regexp.d.ts",
+        "tools/tsc/lib.es2019.array.d.ts",
+        "tools/tsc/lib.es2019.d.ts",
+        "tools/tsc/lib.es2019.full.d.ts",
+        "tools/tsc/lib.es2019.intl.d.ts",
+        "tools/tsc/lib.es2019.object.d.ts",
+        "tools/tsc/lib.es2019.string.d.ts",
+        "tools/tsc/lib.es2019.symbol.d.ts",
+        "tools/tsc/lib.es2020.bigint.d.ts",
+        "tools/tsc/lib.es2020.d.ts",
+        "tools/tsc/lib.es2020.date.d.ts",
+        "tools/tsc/lib.es2020.full.d.ts",
+        "tools/tsc/lib.es2020.intl.d.ts",
+        "tools/tsc/lib.es2020.number.d.ts",
+        "tools/tsc/lib.es2020.promise.d.ts",
+        "tools/tsc/lib.es2020.sharedmemory.d.ts",
+        "tools/tsc/lib.es2020.string.d.ts",
+        "tools/tsc/lib.es2020.symbol.wellknown.d.ts",
+        "tools/tsc/lib.es2021.d.ts",
+        "tools/tsc/lib.es2021.full.d.ts",
+        "tools/tsc/lib.es2021.intl.d.ts",
+        "tools/tsc/lib.es2021.promise.d.ts",
+        "tools/tsc/lib.es2021.string.d.ts",
+        "tools/tsc/lib.es2021.weakref.d.ts",
+        "tools/tsc/lib.es2022.array.d.ts",
+        "tools/tsc/lib.es2022.d.ts",
+        "tools/tsc/lib.es2022.error.d.ts",
+        "tools/tsc/lib.es2022.full.d.ts",
+        "tools/tsc/lib.es2022.intl.d.ts",
+        "tools/tsc/lib.es2022.object.d.ts",
+        "tools/tsc/lib.es2022.regexp.d.ts",
+        "tools/tsc/lib.es2022.sharedmemory.d.ts",
+        "tools/tsc/lib.es2022.string.d.ts",
+        "tools/tsc/lib.es2023.array.d.ts",
+        "tools/tsc/lib.es2023.collection.d.ts",
+        "tools/tsc/lib.es2023.d.ts",
+        "tools/tsc/lib.es2023.full.d.ts",
+        "tools/tsc/lib.es2023.intl.d.ts",
+        "tools/tsc/lib.es2024.arraybuffer.d.ts",
+        "tools/tsc/lib.es2024.collection.d.ts",
+        "tools/tsc/lib.es2024.d.ts",
+        "tools/tsc/lib.es2024.full.d.ts",
+        "tools/tsc/lib.es2024.object.d.ts",
+        "tools/tsc/lib.es2024.promise.d.ts",
+        "tools/tsc/lib.es2024.regexp.d.ts",
+        "tools/tsc/lib.es2024.sharedmemory.d.ts",
+        "tools/tsc/lib.es2024.string.d.ts",
+        "tools/tsc/lib.es5.d.ts",
+        "tools/tsc/lib.es6.d.ts",
+        "tools/tsc/lib.esnext.array.d.ts",
+        "tools/tsc/lib.esnext.asynciterable.d.ts",
+        "tools/tsc/lib.esnext.bigint.d.ts",
+        "tools/tsc/lib.esnext.collection.d.ts",
+        "tools/tsc/lib.esnext.d.ts",
+        "tools/tsc/lib.esnext.decorators.d.ts",
+        "tools/tsc/lib.esnext.disposable.d.ts",
+        "tools/tsc/lib.esnext.full.d.ts",
+        "tools/tsc/lib.esnext.intl.d.ts",
+        "tools/tsc/lib.esnext.iterator.d.ts",
+        "tools/tsc/lib.esnext.object.d.ts",
+        "tools/tsc/lib.esnext.promise.d.ts",
+        "tools/tsc/lib.esnext.regexp.d.ts",
+        "tools/tsc/lib.esnext.string.d.ts",
+        "tools/tsc/lib.esnext.symbol.d.ts",
+        "tools/tsc/lib.esnext.weakref.d.ts",
+        "tools/tsc/lib.scripthost.d.ts",
+        "tools/tsc/lib.webworker.asynciterable.d.ts",
+        "tools/tsc/lib.webworker.d.ts",
+        "tools/tsc/lib.webworker.importscripts.d.ts",
+        "tools/tsc/lib.webworker.iterable.d.ts",
+        "tools/tsc/node_modules/source-map-support.js",
+        "tools/tsc/pl/diagnosticMessages.generated.json",
+        "tools/tsc/pt-BR/diagnosticMessages.generated.json",
+        "tools/tsc/ru/diagnosticMessages.generated.json",
+        "tools/tsc/tr/diagnosticMessages.generated.json",
+        "tools/tsc/tsc.js",
+        "tools/tsc/tsserver.js",
+        "tools/tsc/tsserverlibrary.js",
+        "tools/tsc/typesMap.json",
+        "tools/tsc/typescript.js",
+        "tools/tsc/typescriptServices.js",
+        "tools/tsc/typingsInstaller.js",
+        "tools/tsc/watchGuard.js",
+        "tools/tsc/zh-CN/diagnosticMessages.generated.json",
+        "tools/tsc/zh-TW/diagnosticMessages.generated.json"
+      ]
+    },
     "Microsoft.Win32.Primitives/4.3.0": {
       "sha512": "9ZQKCWxH7Ijp9BfahvL2Zyf1cJIk8XYLF6Yjzr2yi0b2cOut/HQ31qf1ThHAgCc3WiZMdnWcfJCgN82/0UunxA==",
       "type": "package",
@@ -5512,6 +5826,43 @@
         "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll",
         "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "MimeKit/4.2.0": {
+      "sha512": "HlfWiJ6t40r8u/rCK2p/8dm1ILiWw4XHucm2HImDYIFS3uZe7IKZyaCDafEoZR7VG7AW1JQxNPQCAxmAnJfRvA==",
+      "type": "package",
+      "path": "mimekit/4.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "docs/README.md",
+        "icons/mimekit-50.png",
+        "lib/net462/MimeKit.dll",
+        "lib/net462/MimeKit.dll.config",
+        "lib/net462/MimeKit.pdb",
+        "lib/net462/MimeKit.xml",
+        "lib/net47/MimeKit.dll",
+        "lib/net47/MimeKit.dll.config",
+        "lib/net47/MimeKit.pdb",
+        "lib/net47/MimeKit.xml",
+        "lib/net48/MimeKit.dll",
+        "lib/net48/MimeKit.dll.config",
+        "lib/net48/MimeKit.pdb",
+        "lib/net48/MimeKit.xml",
+        "lib/net6.0/MimeKit.dll",
+        "lib/net6.0/MimeKit.dll.config",
+        "lib/net6.0/MimeKit.pdb",
+        "lib/net6.0/MimeKit.xml",
+        "lib/netstandard2.0/MimeKit.dll",
+        "lib/netstandard2.0/MimeKit.dll.config",
+        "lib/netstandard2.0/MimeKit.pdb",
+        "lib/netstandard2.0/MimeKit.xml",
+        "lib/netstandard2.1/MimeKit.dll",
+        "lib/netstandard2.1/MimeKit.dll.config",
+        "lib/netstandard2.1/MimeKit.pdb",
+        "lib/netstandard2.1/MimeKit.xml",
+        "mimekit.4.2.0.nupkg.sha512",
+        "mimekit.nuspec"
       ]
     },
     "Mono.TextTemplating/2.2.1": {
@@ -6565,24 +6916,31 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Formats.Asn1/5.0.0": {
-      "sha512": "MTvUIktmemNB+El0Fgw9egyqT9AYSIk6DTJeoDSpc3GIHxHCMo8COqkWT1mptX5tZ1SlQ6HJZ0OsSvMth1c12w==",
+    "System.Formats.Asn1/7.0.0": {
+      "sha512": "+nfpV0afLmvJW8+pLlHxRjz3oZJw4fkyU9MMEaMhCsHi/SN9bGF9q79ROubDiwTiCHezmK0uCWkPP7tGFP/4yg==",
       "type": "package",
-      "path": "system.formats.asn1/5.0.0",
+      "path": "system.formats.asn1/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/System.Formats.Asn1.dll",
-        "lib/net461/System.Formats.Asn1.xml",
+        "buildTransitive/net461/System.Formats.Asn1.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Formats.Asn1.targets",
+        "lib/net462/System.Formats.Asn1.dll",
+        "lib/net462/System.Formats.Asn1.xml",
+        "lib/net6.0/System.Formats.Asn1.dll",
+        "lib/net6.0/System.Formats.Asn1.xml",
+        "lib/net7.0/System.Formats.Asn1.dll",
+        "lib/net7.0/System.Formats.Asn1.xml",
         "lib/netstandard2.0/System.Formats.Asn1.dll",
         "lib/netstandard2.0/System.Formats.Asn1.xml",
-        "system.formats.asn1.5.0.0.nupkg.sha512",
+        "system.formats.asn1.7.0.0.nupkg.sha512",
         "system.formats.asn1.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Globalization/4.3.0": {
@@ -8758,6 +9116,39 @@
         "system.security.cryptography.openssl.nuspec"
       ]
     },
+    "System.Security.Cryptography.Pkcs/7.0.2": {
+      "sha512": "xhFNJOcQSWhpiVGLLBQYoxAltQSQVycMkwaX1z7I7oEdT9Wr0HzSM1yeAbfoHaERIYd5s6EpLSOLs2qMchSKlA==",
+      "type": "package",
+      "path": "system.security.cryptography.pkcs/7.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Security.Cryptography.Pkcs.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Security.Cryptography.Pkcs.targets",
+        "lib/net462/System.Security.Cryptography.Pkcs.dll",
+        "lib/net462/System.Security.Cryptography.Pkcs.xml",
+        "lib/net6.0/System.Security.Cryptography.Pkcs.dll",
+        "lib/net6.0/System.Security.Cryptography.Pkcs.xml",
+        "lib/net7.0/System.Security.Cryptography.Pkcs.dll",
+        "lib/net7.0/System.Security.Cryptography.Pkcs.xml",
+        "lib/netstandard2.0/System.Security.Cryptography.Pkcs.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.Pkcs.xml",
+        "lib/netstandard2.1/System.Security.Cryptography.Pkcs.dll",
+        "lib/netstandard2.1/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/net6.0/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/net6.0/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/net7.0/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/net7.0/System.Security.Cryptography.Pkcs.xml",
+        "system.security.cryptography.pkcs.7.0.2.nupkg.sha512",
+        "system.security.cryptography.pkcs.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Security.Cryptography.Primitives/4.3.0": {
       "sha512": "7bDIyVFNL/xKeFHjhobUAQqSpJq9YTOpbEs6mR233Et01STBMXNAc/V+BM6dwYGc95gVh/Zf+iVXWzj3mE8DWg==",
       "type": "package",
@@ -9030,41 +9421,39 @@
         "system.text.encoding.nuspec"
       ]
     },
-    "System.Text.Encoding.CodePages/6.0.0": {
-      "sha512": "ZFCILZuOvtKPauZ/j/swhvw68ZRi9ATCfvGbk1QfydmcXBkIWecWKn/250UH7rahZ5OoDBaiAudJtPvLwzw85A==",
+    "System.Text.Encoding.CodePages/7.0.0": {
+      "sha512": "LSyCblMpvOe0N3E+8e0skHcrIhgV2huaNcjUUEa8hRtgEAm36aGkRoC8Jxlb6Ra6GSfF29ftduPNywin8XolzQ==",
       "type": "package",
-      "path": "system.text.encoding.codepages/6.0.0",
+      "path": "system.text.encoding.codepages/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Text.Encoding.CodePages.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
         "buildTransitive/netcoreapp2.0/System.Text.Encoding.CodePages.targets",
-        "buildTransitive/netcoreapp3.1/_._",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
-        "lib/net461/System.Text.Encoding.CodePages.dll",
-        "lib/net461/System.Text.Encoding.CodePages.xml",
+        "lib/net462/System.Text.Encoding.CodePages.dll",
+        "lib/net462/System.Text.Encoding.CodePages.xml",
         "lib/net6.0/System.Text.Encoding.CodePages.dll",
         "lib/net6.0/System.Text.Encoding.CodePages.xml",
-        "lib/netcoreapp3.1/System.Text.Encoding.CodePages.dll",
-        "lib/netcoreapp3.1/System.Text.Encoding.CodePages.xml",
+        "lib/net7.0/System.Text.Encoding.CodePages.dll",
+        "lib/net7.0/System.Text.Encoding.CodePages.xml",
         "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
         "lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.xml",
         "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.dll",
         "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.xml",
-        "runtimes/win/lib/netcoreapp3.1/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/netcoreapp3.1/System.Text.Encoding.CodePages.xml",
-        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
-        "system.text.encoding.codepages.6.0.0.nupkg.sha512",
+        "runtimes/win/lib/net7.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/net7.0/System.Text.Encoding.CodePages.xml",
+        "system.text.encoding.codepages.7.0.0.nupkg.sha512",
         "system.text.encoding.codepages.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -9752,6 +10141,11 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "EmailProvider/1.0.0": {
+      "type": "project",
+      "path": "../EmailProvider/EmailProvider.csproj",
+      "msbuildProject": "../EmailProvider/EmailProvider.csproj"
+    },
     "skills_hub.core/1.0.0": {
       "type": "project",
       "path": "../skills_hub.core/skills_hub.core.csproj",
@@ -9770,32 +10164,34 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "EmailProvider >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 8.0.5",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.5",
       "Microsoft.AspNetCore.Identity.UI >= 8.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.5",
+      "Microsoft.TypeScript.MSBuild >= 5.7.3",
       "skills_hub.core >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\who\\.nuget\\packages\\": {},
+    "C:\\Users\\User\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\work\\2025\\skills\\skills_hub\\skills_hub.csproj",
+      "projectUniqueName": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\skills_hub.csproj",
       "projectName": "skills_hub",
-      "projectPath": "D:\\work\\2025\\skills\\skills_hub\\skills_hub.csproj",
-      "packagesPath": "C:\\Users\\who\\.nuget\\packages\\",
-      "outputPath": "D:\\work\\2025\\skills\\skills_hub\\obj\\",
+      "projectPath": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\skills_hub.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\who\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -9811,8 +10207,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\work\\2025\\skills\\skills_hub.core\\skills_hub.core.csproj": {
-              "projectPath": "D:\\work\\2025\\skills\\skills_hub.core\\skills_hub.core.csproj"
+            "D:\\nadezhda\\own\\projects\\skills_hub\\EmailProvider\\EmailProvider.csproj": {
+              "projectPath": "D:\\nadezhda\\own\\projects\\skills_hub\\EmailProvider\\EmailProvider.csproj"
+            },
+            "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\skills_hub.core.csproj": {
+              "projectPath": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\skills_hub.core.csproj"
             }
           }
         }
@@ -9826,8 +10225,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -9852,6 +10250,12 @@
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
             "version": "[8.0.5, )"
+          },
+          "Microsoft.TypeScript.MSBuild": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[5.7.3, )"
           }
         },
         "imports": [
@@ -9873,7 +10277,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200-preview.0.25057.12/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400-preview.0.24324.5/PortableRuntimeIdentifierGraph.json"
       }
     }
   },

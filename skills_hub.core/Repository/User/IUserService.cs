@@ -5,7 +5,7 @@ public interface IUserService
     public Task<ApplicationUser?> GetCurrentUserAsync();
     public Task<IQueryable<NotificationMessage>> GetCurrentUserNotifications();
     public Task<DTO.UserCreateDTO> GetCreateDTOByIdAsync(Guid id);
-    public Task<ApplicationUser> GetByIdAsync(Guid id);
+    public Task<ApplicationUser> GetAsync(Guid id);
     public Task<IQueryable<ApplicationUser>> GetItems();
 
     public Task<bool> IsInRole(ApplicationUser user, string role);
@@ -15,8 +15,7 @@ public interface IUserService
     public Task<ApplicationUser> CreateAsync(DTO.UserCreateDTO user);
     public Task<ApplicationUser> UpdateAsync(DTO.UserCreateDTO item);
 
-    public Task<ApplicationUser> HardDeleteAsync(ApplicationUser item);
-    public Task<ApplicationUser> SoftDeleteAsync(ApplicationUser item);
+    public Task<ApplicationUser> DeleteAsync(ApplicationUser item, bool isHardDelete = false);
     public Task<ApplicationUser> Restore(ApplicationUser item);
 }
 
