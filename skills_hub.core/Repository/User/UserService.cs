@@ -41,7 +41,7 @@ public class UserService : AbstractTransactionService, IUserService
 
     }
 
-    public async Task<ApplicationUser> GetByIdAsync(Guid id)
+    public async Task<ApplicationUser> GetAsync(Guid id)
     {
         var user = await _fullInclude.FirstOrDefaultAsync(x => x.Id == id);
         _context.ChangeTracker.Clear();
@@ -78,7 +78,7 @@ public class UserService : AbstractTransactionService, IUserService
     }
     public async Task<UserCreateDTO> GetCreateDTOByIdAsync(Guid id)
     {
-        var user = await GetByIdAsync(id);
+        var user = await GetAsync(id);
         if (user == null) return null;
         var userCreateDTO = _mapper.Map<UserCreateDTO>(user);
         userCreateDTO.BaseUserInfoId = user.UserInfo.Id;
@@ -109,7 +109,7 @@ public class UserService : AbstractTransactionService, IUserService
         if (userName == null) throw new Exception();
         var dbUser = await _userManager.FindByNameAsync(userName);
 
-        return await GetByIdAsync(dbUser.Id);
+        return await GetAsync(dbUser.Id);
 
     }
     public async Task<IQueryable<NotificationMessage>> GetCurrentUserNotifications()
@@ -234,13 +234,13 @@ public class UserService : AbstractTransactionService, IUserService
                 _context.SaveChanges();
             }
         }
-        return await GetByIdAsync(result.Entity.Id);
+        return await GetAsync(result.Entity.Id);
     }
 
     public async Task<ApplicationUser> UpdateAsync(UserCreateDTO item)
     {
         #region CreateUser
-        var dbUser = await GetByIdAsync(item.Id);
+        var dbUser = await GetAsync(item.Id);
 
         if (dbUser == null) throw new Exception("User was not found in database");
 
@@ -328,7 +328,7 @@ public class UserService : AbstractTransactionService, IUserService
         if (item.IsTeacher == true && user.UserTeacher == null) user.UserTeacher = new Teacher() { ApplicationUser = user, IsDeleted = true };
 
 
-        return await GetByIdAsync(user.Id);
+        return await GetAsync(user.Id);
 
     }
 
@@ -353,7 +353,7 @@ public class UserService : AbstractTransactionService, IUserService
 
         return dbItem;
     }
-    public async Task<bool> IsInRole(ApplicationUser user,string role)
+    public async Task<bool> IsInRole(ApplicationUser user, string role)
     {
         return await _userManager.IsInRoleAsync(user, role);
     }
@@ -439,12 +439,13 @@ public class UserService : AbstractTransactionService, IUserService
 
     #region Delete
 
-    public async Task<ApplicationUser> HardDeleteAsync(ApplicationUser item)
+    public async Task<ApplicationUser> DeleteAsync(ApplicationUser item, bool isHardDelete = false)
     {
 
         if (item == null) throw new Exception("User not found");
-        if (!item.IsDeleted)
+        if (!item.IsDeleted || isHardDelete)
             await SoftDeleteAsync(item);
+
 
         var executionStrategy = CreateExecutionStrategy();
         await executionStrategy.ExecuteAsync(async () =>
@@ -466,7 +467,7 @@ public class UserService : AbstractTransactionService, IUserService
         return item;
     }
 
-    public async Task<ApplicationUser> SoftDeleteAsync(ApplicationUser item)
+    protected async Task<ApplicationUser> SoftDeleteAsync(ApplicationUser item)
     {
         var roles = _context.UserRoles.Where(x => x.UserId == item.Id);
         _context.UserRoles.RemoveRange(roles);

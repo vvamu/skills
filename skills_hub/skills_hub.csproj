@@ -8,11 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Heplers\**" />
+    <Content Remove="Heplers\**" />
+    <EmbeddedResource Remove="Heplers\**" />
+    <None Remove="Heplers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.5" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="5.7.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -23,11 +34,10 @@
     <Folder Include="Views\LessonTypeProperties\Location\" />
     <Folder Include="Views\LessonTypeProperties\PaymentCategory\" />
     <Folder Include="Views\Lesson\" />
-    <Folder Include="Views\Home\" />
-    <Folder Include="Heplers\" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EmailProvider\EmailProvider.csproj" />
     <ProjectReference Include="..\skills_hub.core\skills_hub.core.csproj" />
   </ItemGroup>
 
