@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\nadezhda\\own\\projects\\skills_hub\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D5B902FE-5E13-4CE9-A904-941E36FD3419}|skills_hub\\skills_hub.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\views\\home\\index\u0441rm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D5B902FE-5E13-4CE9-A904-941E36FD3419}|skills_hub\\skills_hub.csproj|solutionrelative:skills_hub\\views\\home\\index\u0441rm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D5B902FE-5E13-4CE9-A904-941E36FD3419}|skills_hub\\skills_hub.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D5B902FE-5E13-4CE9-A904-941E36FD3419}|skills_hub\\skills_hub.csproj|solutionrelative:skills_hub\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -125,11 +129,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 173,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "Index\u0421RM.cshtml",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Views\\Home\\Index\u0421RM.cshtml",
+              "RelativeDocumentMoniker": "skills_hub\\Views\\Home\\Index\u0421RM.cshtml",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Views\\Home\\Index\u0421RM.cshtml",
+              "RelativeToolTip": "skills_hub\\Views\\Home\\Index\u0421RM.cshtml",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAqwK4AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T13:12:32.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\User\\UserService.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\User\\UserService.cs",
@@ -137,12 +154,11 @@
               "RelativeToolTip": "skills_hub.core\\Repository\\User\\UserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T11:11:08.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-13T11:11:08.943Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "GroupTypeService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Implementation\\GroupTypeService.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\LessonType\\Implementation\\GroupTypeService.cs",
@@ -154,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "FilterMaster.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Helpers\\SearchModels\\FilterMaster.cs",
               "RelativeDocumentMoniker": "skills_hub\\Helpers\\SearchModels\\FilterMaster.cs",
@@ -162,12 +178,11 @@
               "RelativeToolTip": "skills_hub\\Helpers\\SearchModels\\FilterMaster.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAB4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T08:40:41.881Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-13T08:40:41.881Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "GroupService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\GroupService.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\GroupService.cs",
@@ -179,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "IAbstractLogModel.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Helpers\\IAbstractLogModel.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Helpers\\IAbstractLogModel.cs",
@@ -191,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "skills_hub\\Controllers\\AccountController.cs",
@@ -199,12 +214,11 @@
               "RelativeToolTip": "skills_hub\\Controllers\\AccountController.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAiwCcAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T06:07:26.738Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-13T06:07:26.738Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "StudentFilterModel.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Helpers\\SearchModels\\StudentFilterModel.cs",
               "RelativeDocumentMoniker": "skills_hub\\Helpers\\SearchModels\\StudentFilterModel.cs",
@@ -212,12 +226,24 @@
               "RelativeToolTip": "skills_hub\\Helpers\\SearchModels\\StudentFilterModel.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAgwB4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T08:41:32.964Z",
+              "WhenOpened": "2025-02-13T08:41:32.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "skills_hub\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "skills_hub\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T06:10:41.088Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "TeacherFilterModel.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Helpers\\SearchModels\\TeacherFilterModel.cs",
               "RelativeDocumentMoniker": "skills_hub\\Helpers\\SearchModels\\TeacherFilterModel.cs",
@@ -225,25 +251,11 @@
               "RelativeToolTip": "skills_hub\\Helpers\\SearchModels\\TeacherFilterModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T08:42:02.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-13T08:42:02.118Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "skills_hub\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "skills_hub\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAP0BAAAAAAAAAAAAAAEAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-13T06:10:41.088Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "skills_hub\\Controllers\\HomeController.cs",
@@ -251,12 +263,11 @@
               "RelativeToolTip": "skills_hub\\Controllers\\HomeController.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAUwD4AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T06:09:29.499Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-13T06:09:29.499Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "IGroupService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\IGroupService.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\IGroupService.cs",
@@ -268,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "IUserService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\User\\IUserService.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\User\\IUserService.cs",
@@ -280,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "INotificationService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\User\\Interfaces\\INotificationService.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\User\\Interfaces\\INotificationService.cs",
@@ -292,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ILessonService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\ILessonService.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\ILessonService.cs",
@@ -304,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "GroupFilterModel.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Helpers\\SearchModels\\GroupFilterModel.cs",
               "RelativeDocumentMoniker": "skills_hub\\Helpers\\SearchModels\\GroupFilterModel.cs",
@@ -316,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "LessonFilterModel.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Helpers\\SearchModels\\LessonFilterModel.cs",
               "RelativeDocumentMoniker": "skills_hub\\Helpers\\SearchModels\\LessonFilterModel.cs",
@@ -328,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "UserFilterModel.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Helpers\\SearchModels\\UserFilterModel.cs",
               "RelativeDocumentMoniker": "skills_hub\\Helpers\\SearchModels\\UserFilterModel.cs",
@@ -340,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "OrderModel.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Helpers\\SearchModels\\OrderModel.cs",
               "RelativeDocumentMoniker": "skills_hub\\Helpers\\SearchModels\\OrderModel.cs",
@@ -352,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "MailService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\EmailProvider\\MailService.cs",
               "RelativeDocumentMoniker": "EmailProvider\\MailService.cs",
@@ -364,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "EmailProvider.csproj",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\EmailProvider\\EmailProvider.csproj",
               "RelativeDocumentMoniker": "EmailProvider\\EmailProvider.csproj",
@@ -376,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "EmailProvider",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\EmailProvider\\EmailProvider.csproj",
               "RelativeDocumentMoniker": "EmailProvider\\EmailProvider.csproj",
@@ -387,7 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "AbstractLessonTypeLogModelService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\AbstractLessonTypeLogModelService.cs",
               "RelativeDocumentMoniker": "skills_hub.tests\\AbstractLessonTypeLogModelService.cs",
@@ -399,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "AbstractLogModelService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Helpers\\AbstractLogModelService.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Helpers\\AbstractLogModelService.cs",
@@ -411,19 +422,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "BaseUserInfoService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\User\\BaseUserInfoService.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\User\\BaseUserInfoService.cs",
               "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\User\\BaseUserInfoService.cs",
               "RelativeToolTip": "skills_hub.core\\Repository\\User\\BaseUserInfoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T15:56:59.796Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "AbstractLogModelTest.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\AbstractLogModelTest.cs",
               "RelativeDocumentMoniker": "skills_hub.tests\\AbstractLogModelTest.cs",
@@ -435,7 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "LessonTypeService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Implementation\\LessonTypeService.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\LessonType\\Implementation\\LessonTypeService.cs",
@@ -447,19 +458,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "LessonTypeServiceTest.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\LessonTypeServiceTest.cs",
               "RelativeDocumentMoniker": "skills_hub.tests\\LessonTypeServiceTest.cs",
               "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.tests\\LessonTypeServiceTest.cs",
               "RelativeToolTip": "skills_hub.tests\\LessonTypeServiceTest.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAiwBQAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAADwvwwAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T09:11:03.042Z"
+              "WhenOpened": "2025-02-12T09:11:03.042Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 23,
+              "Title": "PaymentCategoryService.cs",
+              "DocumentMoniker": "D:\\work\\2025\\skills\\skills_hub.core\\Repository\\LessonType\\Implementation\\PaymentCategoryService.cs",
+              "RelativeDocumentMoniker": "skills_hub.core\\Repository\\LessonType\\Implementation\\PaymentCategoryService.cs",
+              "ToolTip": "D:\\work\\2025\\skills\\skills_hub.core\\Repository\\LessonType\\Implementation\\PaymentCategoryService.cs",
+              "RelativeToolTip": "skills_hub.core\\Repository\\LessonType\\Implementation\\PaymentCategoryService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T16:54:35.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "ILessonTypeService.cs",
               "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\LessonType\\Interfaces\\ILessonTypeService.cs",
               "RelativeDocumentMoniker": "skills_hub.core\\Repository\\LessonType\\Interfaces\\ILessonTypeService.cs",
@@ -471,7 +496,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "UserTest.cs",
               "DocumentMoniker": "D:\\work\\2025\\skills\\skills_hub.tests\\UserTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\work\\2025\\skills\\skills_hub.tests\\UserTest.cs",
