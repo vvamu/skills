@@ -329,7 +329,7 @@ public class AccountController : Controller
         List<domain.Models.Groups.Group> studentGroups = new List<Group>();
         foreach (var gro in groups)
         {
-            var group = await _groupService.GetAsync(gro.GroupId);
+            var group = await _groupService.GetLastValueAsync(gro.GroupId);
             studentGroups.Add(group);
         }
 
@@ -359,7 +359,7 @@ public class AccountController : Controller
         List<Group> teacherGroups = new List<Group>();
         foreach (var gro in groups)
         {
-            var group = await _groupService.GetAsync(gro.GroupId);
+            var group = await _groupService.GetLastValueAsync(gro.GroupId);
             teacherGroups.Add(group);
         }
 

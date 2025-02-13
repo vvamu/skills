@@ -2,10 +2,9 @@
 
 public interface IGroupService
 {
-
     public IQueryable<Group> GetItems();
-    public Task<Group> GetAsync(Guid id);
-    public Task<Group> GetAsyncToGroupsList(Guid id);
+    public Task<Group> GetLastValueAsync(Guid? itemId, bool withParents = false);
+    //public Task<Group> GetAsyncToGroupsList(Guid id);
     public Task<Group> UpdateAsync(Group item, Guid[] studentId, string[] dayName, TimeSpan[] startTime);
     public Task<Group> CreateAsync(Group item, Guid[] studentId, string[] dayName, TimeSpan[] startTime);
     public Task<Group> DeleteAsync(Guid id, bool isHardDelete = false);

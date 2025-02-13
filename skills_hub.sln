@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "skills_hub.tests", "skills_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailProvider", "EmailProvider\EmailProvider.csproj", "{CCECAFDA-B815-42AA-8978-34296137A660}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "skills_hub.application", "skills_hub.application\skills_hub.application.csproj", "{6580E800-3B1E-47E9-973E-258A4E4B0E06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{CCECAFDA-B815-42AA-8978-34296137A660}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCECAFDA-B815-42AA-8978-34296137A660}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCECAFDA-B815-42AA-8978-34296137A660}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6580E800-3B1E-47E9-973E-258A4E4B0E06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6580E800-3B1E-47E9-973E-258A4E4B0E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6580E800-3B1E-47E9-973E-258A4E4B0E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6580E800-3B1E-47E9-973E-258A4E4B0E06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{FE4A8371-434A-40E2-92C0-F469F2FC71B5} = {58D62810-3530-4A2D-8775-2381C574FD75}
 		{0DF08EBB-34FB-47F6-B520-C4E2FF31AEBB} = {657AD904-F9A3-4FF7-ACB2-FB4657C7D5A3}
 		{CCECAFDA-B815-42AA-8978-34296137A660} = {58D62810-3530-4A2D-8775-2381C574FD75}
+		{6580E800-3B1E-47E9-973E-258A4E4B0E06} = {58D62810-3530-4A2D-8775-2381C574FD75}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AE4E6360-92F0-44CA-8229-E2CEF7C34791}

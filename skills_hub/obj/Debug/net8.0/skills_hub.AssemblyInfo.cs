@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("skills_hub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7aa0c4b847c404a52a0cde1b5cfb3084171ccfb6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e375eec79ad295de201369f9c4528a0b2dcec1d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("skills_hub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("skills_hub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
