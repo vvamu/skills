@@ -3,6 +3,7 @@ using Moq;
 using skills_hub.core.Helpers;
 using skills_hub.core.Repository.LessonType.Implementation;
 using skills_hub.core.Repository.LessonType.Interfaces;
+using skills_hub.core.Repository.User;
 using skills_hub.domain.Models.LessonTypes;
 using skills_hub.persistence;
 
@@ -67,6 +68,12 @@ public class LessonTypeServiceTest : IDisposable
     {
         try
         {
+            var itemsPayement = _paymentCategoryService.GetCurrentItems().ToList();
+            foreach (var item in itemsPayement)
+            {
+                await _paymentCategoryService.RemoveAsync(item.Id);
+            }
+            itemsPayement = _paymentCategoryService.GetCurrentItems().ToList();
 
             var paymentCategory = new PaymentCategory()
             {

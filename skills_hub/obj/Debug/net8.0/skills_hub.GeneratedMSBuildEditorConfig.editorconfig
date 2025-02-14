@@ -9,61 +9,75 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = skills_hub
 build_property.RootNamespace = skills_hub
-build_property.ProjectDir = D:\work\2025\skills\skills_hub\
+build_property.ProjectDir = D:\nadezhda\own\projects\skills_hub\skills_hub\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\work\2025\skills\skills_hub
+build_property.MSBuildProjectDirectory = D:\nadezhda\own\projects\skills_hub\skills_hub
 build_property._RazorSourceGeneratorDebug = 
-build_property.EffectiveAnalysisLevelStyle = 8.0
-build_property.EnableCodeStyleSeverity = 
 
-[D:/work/2025/skills/skills_hub/Views/Account/Create.cshtml]
+[D:/nadezhda/own/projects/skills_hub/skills_hub/Views/Account/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/work/2025/skills/skills_hub/Views/Account/Index/Index.cshtml]
+[D:/nadezhda/own/projects/skills_hub/skills_hub/Views/Account/Index/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/work/2025/skills/skills_hub/Views/Account/Index/_UsersTableList.cshtml]
+[D:/nadezhda/own/projects/skills_hub/skills_hub/Views/Account/Index/_UsersTableList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleFxfVXNlcnNUYWJsZUxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/work/2025/skills/skills_hub/Views/Account/Item/Item.cshtml]
+[D:/nadezhda/own/projects/skills_hub/skills_hub/Views/Account/Item/Item.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJdGVtXEl0ZW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/work/2025/skills/skills_hub/Views/Account/Item/_StudentGroups.cshtml]
+[D:/nadezhda/own/projects/skills_hub/skills_hub/Views/Account/Item/_StudentGroups.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJdGVtXF9TdHVkZW50R3JvdXBzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/work/2025/skills/skills_hub/Views/Account/Item/_StudentInfo.cshtml]
+[D:/nadezhda/own/projects/skills_hub/skills_hub/Views/Account/Item/_StudentInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJdGVtXF9TdHVkZW50SW5mby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/work/2025/skills/skills_hub/Views/Account/Item/_TeacherGroups.cshtml]
+[D:/nadezhda/own/projects/skills_hub/skills_hub/Views/Account/Item/_TeacherGroups.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJdGVtXF9UZWFjaGVyR3JvdXBzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/work/2025/skills/skills_hub/Views/Account/Item/_TeacherInfo.cshtml]
+[D:/nadezhda/own/projects/skills_hub/skills_hub/Views/Account/Item/_TeacherInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJdGVtXF9UZWFjaGVySW5mby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/work/2025/skills/skills_hub/Views/Account/SignIn.cshtml]
+[D:/nadezhda/own/projects/skills_hub/skills_hub/Views/Account/SignIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduSW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/work/2025/skills/skills_hub/Views/Home/Error.cshtml]
+[D:/nadezhda/own/projects/skills_hub/skills_hub/Views/Home/Courses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb3Vyc2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/nadezhda/own/projects/skills_hub/skills_hub/Views/Home/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/work/2025/skills/skills_hub/Views/Home/Index.cshtml]
+[D:/nadezhda/own/projects/skills_hub/skills_hub/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/work/2025/skills/skills_hub/Views/Home/IndexСRM.cshtml]
+[D:/nadezhda/own/projects/skills_hub/skills_hub/Views/Home/IndexСRM.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleNChUk0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/nadezhda/own/projects/skills_hub/skills_hub/Views/Home/Thanks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaGFua3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/nadezhda/own/projects/skills_hub/skills_hub/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/nadezhda/own/projects/skills_hub/skills_hub/Views/Shared/_LayoutHead.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRIZWFkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

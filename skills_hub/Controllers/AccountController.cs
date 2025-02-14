@@ -51,6 +51,38 @@ public class AccountController : Controller
         //_notificationService = notificationService;
 
     }
+
+    [HttpGet]
+    [AllowAnonymous]
+    public IActionResult SignIn()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    [AllowAnonymous]
+    public async Task<IActionResult> SignIn(UserLoginDTO? user)
+    {
+        try
+        {
+            if (!ModelState.IsValid) { ModelState.AddModelError("", ModelState.Values.ToString()); return View(); }
+            var userDb = await _userService.SignInAsync(user);
+            if (userDb == null) return View();
+            return RedirectToAction("Index", "Home");
+        }
+        catch (Exception ex) { ModelState.AddModelError("", ex.Message); return View(); }
+
+    }
+    [HttpGet]
+    [AllowAnonymous]
+    public async new Task<IActionResult> SignOut()
+    {
+        await _userService.SignOutAsync();
+
+        return RedirectToAction("Index", "Home");
+
+    }
+
     #region Get
 
     [HttpGet]
@@ -378,36 +410,7 @@ public class AccountController : Controller
 
 
 
-    [HttpGet]
-    [AllowAnonymous]
-    public IActionResult SignIn()
-    {
-        return View();
-    }
-
-    [HttpPost]
-    [AllowAnonymous]
-    public async Task<IActionResult> SignIn(UserLoginDTO? user)
-    {
-        try
-        {
-            if (!ModelState.IsValid) { ModelState.AddModelError("", ModelState.Values.ToString()); return View(); }
-            var userDb = await _userService.SignInAsync(user);
-            if (userDb == null) return View();
-            return RedirectToAction("Index", "Home");
-        }
-        catch (Exception ex) { ModelState.AddModelError("", ex.Message); return View(); }
-
-    }
-    [HttpGet]
-    [AllowAnonymous]
-    public async new Task<IActionResult> SignOut()
-    {
-        await _userService.SignOutAsync();
-
-        return RedirectToAction("Index", "Home");
-
-    }
+    
 
 
 }

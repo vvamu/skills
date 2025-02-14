@@ -3,6 +3,7 @@ using EmailProvider.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using skills_hub.core.Repository.User;
+using skills_hub.domain.Models.LessonTypes;
 using skills_hub.persistence;
 
 namespace skills_hub.Controllers;
@@ -53,6 +54,15 @@ public class HomeController : Controller
         }
         return View();
     }
+
+    [HttpGet]
+    public async Task<IActionResult> Courses()
+    {
+        //var items = await _lessonTypeService.GetAll().ToListAsync();
+        //var result = items.Where(x => x.ParentId == null || (x.ParentId != null && x.ParentId == Guid.Empty) && !string.IsNullOrEmpty(x.DisplayName)).ToList();
+        return PartialView(new List<LessonType>());
+    }
+
 
     [HttpPost]
     public async Task<IActionResult> SendMessage(SendingMessage msg)

@@ -36,9 +36,8 @@ public class AgeTypeServices : IAgeTypeServices
     {
         var user = new ApplicationUser()
         {
-            Login = "test_login",
-            UserName = "test_name",
-            OwnHashedPassword = "23456",
+            UserName = "test_login",
+            PasswordHash = "23456",
         };
         var res = await _context.Users.AddAsync(user);
         await _context.SaveChangesAsync();

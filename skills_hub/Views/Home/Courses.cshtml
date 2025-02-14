@@ -1,0 +1,608 @@
+﻿@using skills_hub.domain.Models.LessonTypes
+@model List<LessonType>?
+@inject skills_hub.persistence.ApplicationDbContext _context;
+
+
+@{
+    var paymentCategories = _context.PaymentCategories;
+    /*
+    var englishPaymentCategory = paymentCategories.Where(x => x.Name.ToLower().Contains("english"));
+    var progPaymentCategory = paymentCategories.Where(x => x.Name.ToLower().Contains("programming"));
+
+    var groupEnglishPaymentCategory = englishPaymentCategory.FirstOrDefault(x => x.Name.ToLower().Contains("group")) ?? new PaymentCategory() { StudentPricePerLesson = 22.5m, MinCountLessonsToPay = 8 }; //LessonTimeInMinutes = 70
+    var individualPayemntCategory = englishPaymentCategory.FirstOrDefault(x => x.Name.ToLower().Contains("individual")) ?? new PaymentCategory() { StudentPricePerLesson = 40m }; //, LessonTimeInMinutes = 60
+
+    var groupProgLT = progPaymentCategory.FirstOrDefault(x => x.Name.ToLower().Contains("group")) ?? new PaymentCategory() { StudentPricePerLesson = 30m, MinCountLessonsToPay = 4 }; //, LessonTimeInMinutes = 90
+    var individualProgLT = progPaymentCategory.FirstOrDefault(x => x.Name.ToLower().Contains("individual")) ?? new PaymentCategory() { StudentPricePerLesson = 50m }; //LessonTimeInMinutes = 60
+    */
+
+    // _context.GroupTypes.ToList();
+    // _context.AgeTypes.ToList();
+    var lessonTypesList = Model; 
+
+    var englishLTs = lessonTypesList.Where(x => !x.IsDeleted).Where(x => x.Course != null && x.Course.Subject.ToLower().Contains("english"));
+    var progLTs = lessonTypesList.Where(x => !x.IsDeleted).Where(x => x.Course != null && x.Course.Subject.ToLower().Contains("programming"));
+
+    var englishIndividual = englishLTs.Where(x => x.GroupType != null && x.GroupType?.MaximumStudents == 1).ToList();
+    var englishGroup = englishLTs.Where(x => x.GroupType != null && x.GroupType?.MaximumStudents > 1).ToList();
+    var progIndividual = progLTs.Where(x => x.GroupType != null && x.GroupType?.MaximumStudents == 1).ToList();
+    var progGroup = progLTs.Where(x => x.GroupType != null && x.GroupType?.MaximumStudents > 1).ToList();
+
+
+
+
+    var groupEnglishLT = englishGroup.FirstOrDefault() ?? new LessonType() { StudentPricePerLesson = 25m, MinCountLessonsToPay = 8, LessonTimeInMinutes = 60 };
+    var individualEnglishLT = englishIndividual.FirstOrDefault() ?? new LessonType() { StudentPricePerLesson = 40m, MinCountLessonsToPay = 1, LessonTimeInMinutes = 60 }; //, LessonTimeInMinutes = 60
+    var groupProgLT = progGroup.FirstOrDefault() ?? new LessonType() { StudentPricePerLesson = 35m, MinCountLessonsToPay = 4, LessonTimeInMinutes = 90 }; //, LessonTimeInMinutes = 90
+    var individualProgLT = progIndividual.FirstOrDefault() ?? new LessonType() { StudentPricePerLesson = 50m, MinCountLessonsToPay = 1, LessonTimeInMinutes = 70 }; //LessonTimeInMinutes = 60
+
+
+    var englishIndividualAdults = englishIndividual.FirstOrDefault(x => x.AgeType != null && x.AgeType?.Name == "Toddlers");
+    var englishGroupAdults = englishIndividual.FirstOrDefault(x => x.AgeType != null && x.AgeType?.Name == "Toddlers");
+
+    var englishIndividualToddlers = englishIndividual.FirstOrDefault(x => x.AgeType != null && x.AgeType?.Name == "Toddlers");
+    var englishGroupToddlers = englishIndividual.FirstOrDefault(x => x.AgeType != null && x.AgeType?.Name == "Toddlers");
+
+    var englishIndividualOrganiz = englishIndividual.FirstOrDefault(x => x.AgeType != null && x.AgeType?.Name == "Toddlers");
+    var englishGroupOrganiz = englishIndividual.FirstOrDefault(x => x.AgeType != null && x.AgeType?.Name == "Toddlers");
+
+    var englishIndividualExpress = englishIndividual.FirstOrDefault(x => x.AgeType != null && x.AgeType?.Name == "Toddlers");
+    var englishGroupExpress = englishIndividual.FirstOrDefault(x => x.AgeType != null && x.AgeType?.Name == "Toddlers");
+
+    var englishIndividualSpeakingClub = englishIndividual.FirstOrDefault(x => x.AgeType != null && x.AgeType?.Name == "Toddlers");
+    var englishGroupSpeakingClub = englishIndividual.FirstOrDefault(x => x.AgeType != null && x.AgeType?.Name == "Toddlers");
+
+    var programmingIndividual = progLTs.Where(x => x.GroupType != null && x.GroupType?.Name == "individual");
+    var programmingGroup = progLTs.Where(x => x.GroupType != null && x.GroupType?.Name == "group");
+
+    // var programmingIndividualScratch = _context.LessonTypes.FirstOrDefault();
+    // var programmingGroupScratch = englishIndividual.FirstOrDefault(x => x.AgeType != null && x.AgeType?.Name == "Toddlers");
+
+    // var programmingIndividualPython = _context.LessonTypes.FirstOrDefault();
+    // var programmingGroupPython = englishIndividual.FirstOrDefault(x => x.AgeType != null && x.AgeType?.Name == "Toddlers");
+
+    // var programmingIndividualJava = _context.LessonTypes.FirstOrDefault();
+    // var programmingGroupJava = englishIndividual.FirstOrDefault(x => x.AgeType != null && x.AgeType?.Name == "Toddlers");
+
+
+}
+
+
+
+
+<!-- Courses more -->
+<section id="features" class="features">
+    <div class="container">
+        <!--  Cources For Adults  -->
+        <div id="english-adults"></div>
+        <div class="row gy-4 p-3 align-items-center features-item" data-aos="fade-up" style="margin-top: 20px; margin-bottom:20px">
+            <div class="col-md-5 order-1 order-md-2" style="align-self:baseline;">
+                <img src="~/images/adult_cources_english@0x.jpg" class="img-fluid" alt="adult_cources_english">
+            </div>
+            <div class="col-md-7 order-2 order-md-1">
+                <h3>Английский для взрослых</h3>
+                <p class="fs-1">Курсы английского языка для взрослых от 16 лет</p>
+                <ul class="list-conditions" style=" list-style: none; margin-left: -10px;">
+
+
+                    <li>- Групповой формат <span>(до 8 человек)</li>
+                    <li>- Онлайн/оффлайн</li>
+                    <li>- Занятия проводятся 2 раза в неделю по @groupEnglishLT.LessonTimeInMinutes минут</li>
+                    <!--<li>- Групповые абонементы от @groupEnglishLT.MinCountLessonsToPay занятий ((groupEnglishLT.StudentTotalCoursePrice)р)</li>-->
+                    <br />
+                    <li>- Индивидуальный формат</li>
+                    <li>- Онлайн/оффлайн</li>
+                    <li>- Занятия проводятся по 60 минут</li>
+
+                    <hr />
+                    <li>- Длительность зависит от скорости обучения учеников</li>
+                    <!--
+                                <li>
+                                    - Цена группового/индивидуального занятия: groupEnglishLT.StudentPricePerLesson р/individualEnglishLT.StudentPricePerLesson р
+                                </li>
+                            -->
+
+
+
+                </ul>
+                <div class="row align-items-center mt-4">
+                    <h4 class="fs-2 fw-normal">
+                        Уровень английского:
+                    </h4>
+                    <div>
+                        <ul class="list-unstyled py-3 levels-english">
+
+
+                            <li class="mb-3 text-900" data-bs-toggle="collapse" href="#collapseExample1"
+                                role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <span class="far fa-check-circle text-700 me-2"></span>
+                                <a id="button1" href="#collapseExample1" type="button" data-bs-toggle="collapse" class="foo">
+                                    BEGINNERS
+                                </a> – уровень А<span style="font-family: sans-serif;">1</span>  (с нуля)
+                                <a id="foo" class="foo"><<</a>
+                            </li>
+                            <div class="collapse row text-md-start" id="collapseExample1" href="#collapseExample1">
+                                <span class="far fa-check-circle  me-2"></span>
+                                <p>
+                                    Обучающиеся смогут начать читать, понимать и употреблять в речи заученные фразы и выражения на самом простом коммуникативном уровне, также смогут представиться/представить других. Спрашивать и отвечать на вопросы о месте своего жительства, знакомых, о бытовой жизни, смогу участвовать в очень простом разговоре, если собеседник говорит медленно и отчетливо и готов поддерживать при разговоре.
+                                </p>
+                            </div>
+
+
+                            <li class="mb-3 text-900" data-bs-toggle="collapse" href="#collapseExample2"
+                                onclick="(this) => {this.style.aria-expanded = !this.style.aria-expanded}" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                <span class="far fa-check-circle text-700 me-2"></span>
+                                <a class="far fa-check-circle  me-2">
+                                    ELEMENTARY
+                                </a> – уровень А1.2
+                                <span class="foo"><<</span>
+                            </li>
+                            <div class="collapse row text-md-start " id="collapseExample2">
+                                <span class="far fa-check-circle  me-2"></span>
+                                <p>
+                                    Обучающиеся смогут понимать и употреблять в речи знакомые фразы и выражения, необходимые для выполнения конкретных задач, также смогут представиться/представить других. Спрашивать и отвечать на вопросы о месте жительства, знакомых, о бытовой жизни, смогу участвовать в несложном разговоре, если собеседник говорит медленно и отчетливо и готов поддерживать при разговоре.
+                                </p>
+                            </div>
+
+
+
+                            <li class="mb-3 text-900" id="button3" type="button" data-bs-toggle="collapse" href="#collapseExample3"
+                                role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <span class="far fa-check-circle  me-2"></span>
+                                <a style="color: #091E40;" class="far fa-check-circle  me-2" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    PRE-INTERMEDIATE
+                                </a> – уровень А2
+                                <span class="foo"><<</span>
+                            </li>
+                            <div class="collapse row text-md-start " id="collapseExample3">
+                                <span class="far fa-check-circle  me-2"></span>
+                                <p>
+                                    Обучающиеся смогут понимать предложения и часто встречающиеся выражения, связанные с основными сферами жизни (например, основные сведения о себе и членах своей семьи, покупках, устройстве на работу и т. п.). Смогут выполнить задачи, связанные с обменом информацией на знакомые или бытовые темы. Смогут рассказать о себе, своих родных и близких, описать основные аспекты повседневной жизни, немного рассказать о своих предстоящих действиях.
+                            </div>
+                            <li class="mb-3 text-900" id="button1" type="button" data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <span class="far fa-check-circle  me-2"></span>
+                                <a style="color: #091E40;" class="far fa-check-circle  me-2">
+                                    INTERMEDIATE
+                                </a> – уровень B1
+                                <span class="foo"><<</span>
+                            </li>
+                            <div class="collapse row text-md-start " id="collapseExample4">
+                                <span class="far fa-check-circle  me-2"></span>
+                                <p style="padding-left: 4.2%;">
+                                    Обучающиеся смогут понимать основные идеи четких сообщений, сделанных на литературном языке на разные темы, типично возникающие на работе, учёбе, досуге и т. д. Будут уметь общаться в большинстве ситуаций, которые могут возникнуть во время пребывания в стране изучаемого языка. Смогут составить связное сообщение на известные или особо интересующие их темы, а также смогут описать впечатления, события, надежды, стремления, изложить и обосновать свое мнение и планы на будущее.
+                                </p>
+                            </div>
+                            <li class="mb-3 text-900" id="button1" type="button" data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <span class="far fa-check-circle  me-2"></span>
+                                <a style="color: #091E40;" class="far fa-check-circle  me-2">
+                                    UPPER-INTERMEDIATE
+                                </a> – уровень B2
+                                <span class="foo"><<</span>
+                            </li>
+                            <div class="collapse row text-md-start " id="collapseExample5">
+                                <span class="far fa-check-circle  me-2"></span>
+                                <p style="padding-left: 4.2%;">
+                                    Обучающиеся смогут понимать общее содержание сложных текстов на абстрактные и конкретные темы, в том числе узкоспециальные тексты, говорить достаточно быстро и спонтанно, чтобы постоянно общаться с носителями языка без особых затруднений для любой из сторон. Смогут делать четкие, подробные сообщения на различные темы и изложить свой взгляд на основную проблему, показать преимущество и недостатки разных мнений.
+                                </p>
+                            </div>
+                            <li class="mb-3 text-900" id="button1" type="button" data-bs-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <span class="far fa-check-circle  me-2"></span>
+                                <a style="color: #091E40;" class="far fa-check-circle  me-2">
+                                    ADVANCE
+                                </a> – уровень С1
+                                <span class="foo"><<</span>
+                            </li>
+                            <div class="collapse row text-md-start " id="collapseExample6">
+                                <span class="far fa-check-circle  me-2"></span>
+                                <p style="padding-left: 4.2%;">
+                                    Обучающиеся смогут понимать объемные сложные тексты на различную тематику, распознавать скрытое значение, спонтанно говорить в быстром темпе, не испытывая затруднений с подбором слов и выражений. Гибко и эффективно использовать язык для общения в научной и профессиональной деятельности. Смогут создать точное, детальное, хорошо выстроенное сообщение на сложные темы, демонстрируя владение моделями организации текста, средствами связи и объединением его элементов
+                                </p>
+                            </div>
+                        </ul>
+                        <a type="button" href="#booking" class="btn btn-primary">Попробовать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  Cources For Children  -->
+        <div id="english-children"></div>
+        <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
+            <div class="col-md-5" style="align-self:baseline;">
+                <img src="~/images/cources_children@0x.jpg" class="img-fluid " alt="cources_children" style="max-height: 350px; position: top;">
+            </div>
+            <div class="col-md-7">
+                <h3>Английский для детей</h3>
+                <p class="fs-1">
+                    Курсы английского языка для детей от 4 до 16 лет
+                </p>
+                <ul class="list-conditions" style=" list-style: none; margin-left: -10px;">
+                    <li><!-- - Цена группового и индивидуального занятия: 60р и 80р --></li>
+                </ul>
+                <div>
+                    <ul class="list-unstyled py-3" id="scroll-children">
+                        <!--1-->
+
+                        <li class="mb-3 text-900" data-bs-toggle="collapse" href="#collapseChildren1" role="button" aria-expanded="false" aria-controls="collapseChildren1">
+                            <span class="far fa-check-circle text-700 me-2"></span>
+                            <a style="color: #091E40;" id="button1" type="button" data-bs-toggle="collapse"
+                               href="#collapseChildren1" role="button" aria-expanded="false" aria-controls="collapseExample"
+                               class="foo1">
+                                Для малышей 4-6 лет
+                            </a>
+                            <span class="foo1"><<</span>
+                        </li>
+                        <div class="collapse row text-md-start col-md-20" id="collapseChildren1">
+                            <span class="far fa-check-circle  me-2"></span>
+                            <ul class="list-conditions" style="padding-left: 4.2%; list-style: none;">
+                                <li>- Групповой формат <span>(до 8 человек)</li>
+                                <li>- 2-4 раза еженедельно</li>
+                                <li>- Занятия проводятся 2-4 раза в неделю по 45 минут</li>
+                                <!--<li>- Групповые абонементы от @groupEnglishLT.MinCountLessonsToPay занятий (groupEnglishLT.StudentTotalCoursePrice р)</li>-->
+                                <!--<li>- Цена одного занятия: groupEnglishLT.StudentPricePerLesson р</li>
+                                      <br/>-->
+
+                            </ul>
+                            <p></p>
+                            <p style="padding-left: 4.2%; font-size: 16px;">
+                                Малыши с легкостью впитывают информацию любого плана, если им правильно ее доносить. Применительно к английскому это значит, что языковые уроки для малышей необходимо проводить в развлекательно-игровом формате, регулярно и последовательно
+                            </p>
+                            <p style="padding-left: 4.2%; font-size: 16px;">
+                                При создании этого курса методисты нашей школы использовали методику раннего развития в игровой форме, которая облегчает учебный процесс для детей. Малыши смогут узнать интересные факты о животных, о природе, о медицине, о городе и правилах движения, о магазинах и покупках. Обучение ведётся с помощью игрушек, красочных карточек, веселых песен и стихов, мультфильмов и игр.
+                            </p>
+                        </div>
+
+                        <!--2-->
+                        <li class="mb-3 text-900" data-bs-toggle="collapse" href="#collapseChildren2" role="button" aria-expanded="false" aria-controls="collapseChildren1">
+                            <span class="far fa-check-circle text-700 me-2"></span>
+                            <a style="color: #091E40;" id="button1" type="button" data-bs-toggle="collapse"
+                               href="#collapseChildren2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Дети 7-10 лет
+                            </a>
+                            <span class="foo1"><<</span>
+                        </li>
+                        <div class="collapse row text-md-start col-md-20" id="collapseChildren2">
+                            <span class="far fa-check-circle  me-2"></span>
+                            <ul class="list-conditions" style="padding-left: 4.2%; list-style: none;">
+                                <li>- Групповой формат <span>(до 8 человек)</li>
+                                <li>- Онлайн/оффлайн</li>
+                                <li>- Занятия проводятся 2 раза в неделю по @groupEnglishLT.LessonTimeInMinutes минут</li>
+                                <!--<li>- Групповые абонементы от @groupEnglishLT.MinCountLessonsToPay занятий (groupEnglishLT.StudentTotalCoursePrice р)</li>-->
+                                <br />
+                                <li>- Индивидуальный формат</li>
+                                <li>- Онлайн/оффлайн</li>
+                                <li>- Занятия проводятся по 60 минут</li>
+                                <hr />
+                                <li>- Длительность зависит от скорости обучения учеников</li>
+                                <!--
+                                    <li>
+                                        - Цена группового/индивидуального занятия: groupEnglishLT.StudentPricePerLesson р/individualEnglishLT.StudentPricePerLesson р
+                                    </li>
+                                -->
+
+                            </ul>
+                            <p></p>
+                            <ul style="padding-left: 4.2%; list-style: none;" class="direction-educations list-conditions">
+                                <li><span>BEGINNERS</span> – уровень А1.1 (с нуля) </li>
+                                <li><span>ELEMENTARY</span> – уровень А1.2 </li>
+                                <li><span>PRE-INTERMEDIATE</span> – уровень А2 </li>
+                            </ul>
+                            <p></p>
+                            <p style="padding-left: 4.2%; font-size: 16px;">
+                                Малыши с легкостью впитывают информацию любого плана, если им правильно ее доносить. Применительно к английскому это значит, что языковые уроки для малышей необходимо проводить в развлекательно-игровом формате, регулярно и последовательно
+                            </p>
+                            <p style="padding-left: 4.2%; font-size: 16px;">
+                                При создании этого курса методисты нашей школы использовали методику раннего развития в игровой форме, которая облегчает учебный процесс для детей. Малыши смогут узнать интересные факты о животных, о природе, о медицине, о городе и правилах движения, о магазинах и покупках. Обучение ведётся с помощью игрушек, красочных карточек, веселых песен и стихов, мультфильмов и игр.
+                            </p>
+                        </div>
+                        <!--3-->
+                        <li class="mb-3 text-900" data-bs-toggle="collapse" href="#collapseChildren3" role="button" aria-expanded="false" aria-controls="collapseChildren1">
+                            <span class="far fa-check-circle text-700 me-2"></span>
+                            <a style="color: #091E40;" id="button1" type="button" data-bs-toggle="collapse"
+                               href="#collapseChildren3" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Подростки 11-15 лет
+                            </a>
+                            <span class="foo1"><<</span>
+                        </li>
+                        <div class="collapse row text-md-start col-md-20" id="collapseChildren3">
+                            <span class="far fa-check-circle  me-2"></span>
+                            <ul style="padding-left: 4.2%; list-style: none;" class="list-conditions">
+                                <li>- Групповой формат <span>(до 8 человек)</li>
+                                <li>- Онлайн/оффлайн</li>
+                                <li>- Занятия проводятся 2 раза в неделю по @groupEnglishLT.LessonTimeInMinutes минут</li>
+                                <!--<li>- Групповые абонементы от groupEnglishLT.MinCountLessonsToPay занятий (groupEnglishLT.StudentTotalCoursePrice р)</li>-->
+                                <br />
+
+                                <li>- Индивидуальный формат</li>
+                                <li>- Онлайн/оффлайн</li>
+                                <li>- Занятия проводятся по 60 минут</li>
+                                <hr />
+                                <li>- Длительность зависит от скорости обучения учеников</li>
+                                <!--
+                                    <li>
+                                        - Цена группового/индивидуального занятия: groupEnglishLT.StudentPricePerLesson р/individualEnglishLT.StudentPricePerLesson р
+                                    </li>
+                                -->
+
+                            </ul>
+                            <p></p>
+                            <ul style="padding-left: 4.2%; list-style: none;" class="direction-educations list-conditions">
+                                <li><span>BEGINNERS</span> – уровень А1.1 (с нуля)</li>
+                                <li><span>ELEMENTARY</span> – уровень А1.2 </li>
+                                <li><span>PRE-INTERMEDIATE</span> – уровень А2</li>
+                                <li><span>INTERMEDIATE</span> – уровень B1 </li>
+                            </ul>
+                            <p></p>
+                            <p style="padding-left: 4.2%; font-size: 16px;">
+                                Обучение детей этого возраста направлено на формирование и развитие навыков свободного общения и расширение знаний в различных областях.
+                            </p>
+                            <p>Развиваем навыки:</p>
+                            <ul style="padding-left: 4.2%; list-style: none;">
+                                <li style="font-size: 16px;">
+                                    Построение диалогов : обсуждать интересы, планы, выражать согласие/несогласие, интерес, навык вести диалог сразу с несколькими собеседниками.
+                                </li>
+                                <li style="font-size: 16px;">
+                                    Монолог : представлять сообщение, излагать факты, высказывать свое отношение к услышанному или прочитанному, пересказывать.
+                                </li>
+                                <li style="font-size: 16px;">
+                                    Аудирование : понимать речь и содержание услышанного, извлекать главное, давать критическую оценку прослушанного.
+                                </li>
+                                <li style="font-size: 16px;">
+                                    Чтение : свободно читать публицистическую, научно-популярную, страноведческую, художественную литературу.
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+                <a type="button" href="#booking" class="btn btn-primary">Записаться</a>
+            </div>
+        </div>
+        <!--  Cources For Organizations  -->
+        <div id="english-business"></div>
+        <div class="row gy-4 p-3 align-items-center features-item" data-aos="fade-up" style="margin-top: 20px;">
+            <div class="col-md-5 order-1 order-md-2" style="align-self:baseline;">
+                <img src="~/images/cources_organization_english@0x.jpg" alt="organization_cources_english" class="img-fluid">
+            </div>
+            <div class="col-md-7 order-2 order-md-1">
+                <h3>Английский для организаций</h3>
+                <p class="fs-1">Курсы английского языка для специфики вашей работы</p>
+                <ul style=" list-style: none; margin-left: -10px;" class="list-conditions">
+
+                    <li>  <input style="border-color:#d4d4d4;border-radius:7px" type="text" value="- Групповой формат (до 8 человек)" /></li>
+                    <li>- Онлайн/оффлайн</li>
+                    <li>- Занятия проводятся 2 раза в неделю по @groupEnglishLT.LessonTimeInMinutes минут</li>
+                    <!--<li>- Групповые абонементы от groupEnglishLT.MinCountLessonsToPay занятий (groupEnglishLT.StudentTotalCoursePrice р)</li>-->
+                    <br />
+                    <li>- Индивидуальный формат</li>
+                    <li>- Онлайн/оффлайн</li>
+                    <li>- Занятия проводятся по 60 минут</li>
+                    <hr />
+                    <li>- Длительность зависит от скорости обучения учеников</li>
+                    <!--
+                        <li>
+                            - Цена группового/индивидуального занятия: groupEnglishLT.StudentPricePerLesson р/individualEnglishLT.StudentPricePerLesson р
+                        </li>
+                    -->
+                </ul>
+                <div>
+                    <!--
+                    <ul class="list-unstyled py-3" id="scroll-children" style="margin-top: -15px;">
+
+                       <li class="mb-3 text-900" data-bs-toggle="collapse" href="#ok" role="button" aria-expanded="false" aria-controls="collapseChildren1"><span class="far fa-check-circle text-700 me-2"></span>
+                          <a style="color: #091E40;" id="button1" type="button" data-bs-toggle="collapse"
+                             href="#ok" role="button" aria-expanded="false" aria-controls="collapseExample"
+                             >
+                          BUSINESS START-UP</a>
+                       </li>
+                       <li class="mb-3 text-900" data-bs-toggle="collapse" href="#ok" role="button" aria-expanded="false" aria-controls="collapseChildren1"><span class="far fa-check-circle text-700 me-2"></span>
+                          <a style="color: #091E40;" id="button1" type="button" data-bs-toggle="collapse"
+                             href="#ok" role="button" aria-expanded="false" aria-controls="collapseExample"
+                             >
+                          ELEMENTARY BUSINESS</a>
+                       </li>
+                      -->
+                    <p></p>
+
+                    <p style="font-size:17px">
+                        Основная цель этого курса - получение навыков и практики эффективного общения на английском языке в вашей профессиональной области. Программа курса подбирается и согласовывается под конкретную сферу деятельности организации, ее цели и задачи.
+
+                    </p> </p>
+                </div>
+                <a type="button" href="#booking" class="btn btn-primary">Попробовать</a>
+            </div>
+        </div>
+        <!-- Cources For EXPRESS-->
+        <div id="english-express"></div>
+        <div class="row gy-4 align-items-center features-item" data-aos="fade-up" style="margin-top: 20px;">
+            <div class="col-md-5" style="align-self:baseline;">
+                <img src="~/images/cources_express_english@0x.jpg" class="img-fluid" alt="cources_express_english" style="padding-top: 50px;">
+            </div>
+            <div class="col-md-7" style="padding-left: 4.2%;">
+                <h3>Экспресс-английский</h3>
+                <p class="fs-1">Курсы английского языка для по выбранному направлению</p>
+                <ul style=" list-style: none; margin-left: -10px;" class="list-conditions">
+
+                    <li>- Групповой формат <span>(до 8 человек)</li>
+                    <li>- Онлайн/оффлайн</li>
+                    <li>- Занятия проводятся 2 раза в неделю по @groupEnglishLT.LessonTimeInMinutes минут</li>
+                    <!--<li>- Групповые абонементы от groupEnglishLT.MinCountLessonsToPay занятий (groupEnglishLT.StudentTotalCoursePrice р)</li>-->
+                    <br />
+                    <li>- Индивидуальный формат</li>
+                    <li>- Онлайн/оффлайн</li>
+                    <li>- Занятия проводятся по 60 минут</li>
+                    <hr />
+                    <li>- Длительность зависит от скорости обучения учеников</li>
+                    <!--
+                        <li>
+                            - Цена группового/индивидуального занятия: groupEnglishLT.StudentPricePerLesson р/individualEnglishLT.StudentPricePerLesson р
+                        </li>
+                    -->
+                </ul>
+                <p style="font-size:17px">Выбирая экспресс – курсы, вы точно знаете, для каких целей изучаете английский язык, будь то путешествие или переезд в выбранную страну, сдача международных экзаменов. Это поможет составить программу, соответствующую именно Вашим потребностям.</p>
+                <p style="font-size:17px">Программа включает в себя только основные моменты, необходимые Вам для Вашей цели. Так вы не будете тратить время на лексику и грамматические правила, которые, возможно, и вовсе не пригодятся. Выберите те темы, которые вы используете в работе, или которые будут вам полезны в поездке, или в любой другой ситуации.</p>
+                <a type="button" class="btn btn-primary" href="#booking">Записаться</a>
+            </div>
+        </div>
+        <!--Cources Speaking Club-->
+        <div id="english-speaking"></div>
+        <div class="row gy-4 p-3 align-items-center features-item" data-aos="fade-up" style="margin-top: 20px;">
+            <div class="col-md-5 order-1 order-md-2" style="align-self:baseline;">
+                <img src="~/images/english_communicate@0x.jpg" class="img-fluid" alt="english_communicate">
+            </div>
+            <div class="col-md-7 order-2 order-md-1">
+                <h2>Speaking club (Разговорный клуб)</h2>
+                <p class="fs-1">Разговорный английский для подростков и взрослых с уровнем английского от A2 и выше</p>
+                <ul style=" list-style: none; margin-left: -10px;" class="list-conditions">
+                    <li>- Групповой формат <span>(до 8 человек)</li>
+                    <li>- Онлайн/оффлайн</li>
+                    <li>- Занятия проводятся 2 раза в неделю по @groupEnglishLT.LessonTimeInMinutes минут</li>
+                    <!--<li>- Групповые абонементы от groupEnglishLT.MinCountLessonsToPay занятий (groupEnglishLT.StudentTotalCoursePrice р)</li>-->
+                    <br />
+                    <li>- Индивидуальный формат</li>
+                    <li>- Онлайн/оффлайн</li>
+                    <li>- Занятия проводятся по 60 минут</li>
+                    <hr />
+                    <li>- Длительность зависит от скорости обучения учеников</li>
+                    <!--
+                        <li>
+                            - Цена группового/индивидуального занятия: groupEnglishLT.StudentPricePerLesson р/individualEnglishLT.StudentPricePerLesson р
+                        </li>
+                    -->
+                </ul>
+                <div style="margin-top: 30px; margin-left: 6px;">
+                    <p style="font-size:17px">Наш разговорный клуб английского языка с носителем поможет Вам улучшить произношение, преодолеть языковой барьер. Мы подбираем собеседников одного уровня владения языком, что позволяет высказаться каждому. Темы обсуждаются разные: путешествия, покупки, еда, космос, профессии и многое другое.</p>
+                </div>
+                <a type="button" href="#booking" class="btn btn-primary">Попробовать</a>
+            </div>
+        </div>
+        <!--  Cources For Programming  -->
+        <div id="programming"></div>
+        <div class="row gy-4 align-items-center features-item" data-aos="fade-up" style="margin-top:50px">
+            <div class="col-md-5" style="align-self:baseline;">
+                <img src="~/images/programming_cources@0x.jpg" class="img-fluid " alt="programming_cources" style="max-height: 450px; position: top;">
+            </div>
+            <div class="col-md-7">
+                <h2>Программирование</h2>
+                <p class="fs-1">
+                    Курсы по программированию для детей и подростков
+                </p>
+                <ul style=" list-style: none; margin-left: -10px;" class="list-conditions">
+
+                    <li>- Групповой формат <span>(до 8 человек)</li>
+                    <li>- Онлайн/оффлайн</li>
+                    <li>- Занятия проводятся 2 раза в неделю по @groupProgLT.LessonTimeInMinutes минут</li>
+                    <!--<li>- Групповые абонементы от groupEnglishLT.MinCountLessonsToPay занятий (groupEnglishLT.StudentTotalCoursePrice р)</li>-->
+                    <br />
+                    <li>- Индивидуальный формат</li>
+                    <li>- Онлайн/оффлайн</li>
+                    <li>- Занятия проводятся по @individualProgLT.LessonTimeInMinutes минут</li>
+                    <hr />
+                    <li>- Длительность зависит от скорости обучения учеников</li>
+                    <!--
+                    <li>
+                        - Цена группового/индивидуального занятия: groupProgLT.StudentPricePerLesson р/individualProgLT.StudentPricePerLesson р
+                    </li>
+                    -->
+                </ul>
+                <div>
+                    <ul class="list-unstyled py-3" id="scroll-children">
+                        <!--1-->
+                        <li class="mb-3 text-900" data-bs-toggle="collapse" href="#collapseProgramming1" role="button" aria-expanded="false" aria-controls="collapseChildren1">
+                            <span class="far fa-check-circle text-700 me-2"></span>
+                            <a style="color: #091E40;" id="button1" type="button" data-bs-toggle="collapse"
+                               href="#collapseProgramming1" role="button" aria-expanded="false" aria-controls="collapseExample"
+                               class="foo3">
+                                SCRATCH
+                            </a> - от 6 лет
+                            <span class="foo3"><<</span>
+                        </li>
+                        <div class="collapse row text-md-start col-md-20" id="collapseProgramming1">
+                            <span class="far fa-check-circle  me-2"></span>
+                            <p></p>
+                            <p style="padding-left: 4.2%; font-size: 16px;">
+                                Scratch - это веселый способ изучить программирование! С помощью ярких блоков, которые можно перетаскивать и соединять, дети смогут создавать свои собственные игры, анимации и истории. Scratch поможет развить  воображение и логическое мышление любого ребёнка.
+                            </p>
+                        </div>
+                        <!--2-->
+                        <li class="mb-3 text-900" data-bs-toggle="collapse" href="#collapseProgramming2" role="button" aria-expanded="false" aria-controls="collapseChildren1">
+                            <span class="far fa-check-circle text-700 me-2"></span>
+                            <a style="color: #091E40;" id="button1" type="button" data-bs-toggle="collapse"
+                               href="#collapseProgramming2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                PYTHON
+                            </a> - 10-14 лет
+                            <span class="foo3"><<</span>
+                        </li>
+                        <div class="collapse row text-md-start col-md-20" id="collapseProgramming2">
+                            <span class="far fa-check-circle  me-2"></span>
+                            <p></p>
+                            <p style="padding-left: 4.2%; font-size: 16px;">
+                                Это самый популярный язык программирования в мире с 2017 года с простым и понятным кодом. С Python можно научиться анимировать, рисовать, создавать игры и многое другое.
+                                Данный язык широко используется в интернет-приложениях, разработке программного обеспечения, науке о данных и машинном обучении.
+                            </p>
+                            <p style="padding-left: 4.2%; font-size: 16px;">
+                                На курсе Python во время создания своих проектов ребенок сможет изучить синтаксис языка, его основные элементы и получить практические навыки программирования. Программирование так же
+                                способствует развитию логики, усидчивости и пространственного мышления.
+                            </p>
+                        </div>
+                        <!--3-->
+                        <li class="mb-3 text-900" data-bs-toggle="collapse" href="#collapseProgramming3" role="button" aria-expanded="false" aria-controls="collapseProgramming3">
+                            <span class="far fa-check-circle text-700 me-2"></span>
+                            <a style="color: #091E40;" id="button1" type="button" data-bs-toggle="collapse"
+                               href="#collapseProgramming3" role="button" aria-expanded="false" aria-controls="collapseProgramming3">
+                                JAVA
+                            </a> - от 12 лет
+                            <span class="foo3"><<</span>
+                        </li>
+                        <div class="collapse row text-md-start col-md-20" id="collapseProgramming3">
+                            <span class="far fa-check-circle  me-2"></span>
+                            <p></p>
+                            <p style="padding-left: 4.2%; font-size: 16px;">
+                                Java – это язык программирования, который известен своей простотой и гибкостью, что делает его идеальным для начинающих, при этом он используют везде – от компьютеров до мобильных телефонов.
+                                С помощью Java можно создать интерактивные игры, анимации и даже роботов. Дети могут создавать разные уровни для своих героев,  добавлять звуки, менять графику.
+                            </p>
+                            <p>Работа в команде научит ребят совместному творчеству, что  может создать что-то по-настоящему удивительное! А так же дети приобретут навык усидчивости и концентраци во время процесса программирования.</p>
+                        </div>
+                    </ul>
+                </div>
+                <a type="button" href="#booking" class="btn btn-primary">Записаться</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    console.log("HELLO")
+    var texts = document.getElementsByClassName('foo');
+    var texts1 = document.getElementsByClassName('foo1');
+    var texts2 = document.getElementsByClassName('foo2');
+    var texts3 = document.getElementsByClassName('foo3');
+
+    function flash() {
+
+        for (var i = 0; i < texts.length; i++) {
+            var text = texts[i];
+
+            text.style.color = (text.style.color === 'rgb(255, 1, 132)') ? 'deepskyblue' : 'rgb(255, 1, 132)';
+        }
+        for (var i = 0; i < texts1.length; i++) {
+            var text = texts1[i];
+
+            text.style.color = (text.style.color === 'rgb(156, 8, 255)') ? 'deepskyblue' : 'rgb(156, 8, 255)';
+        }
+        for (var i = 0; i < texts2.length; i++) {
+            var text = texts2[i];
+
+            text.style.color = (text.style.color === 'rgb(85, 255, 0)') ? 'deepskyblue' : 'rgb(85, 255, 0)';
+        }
+        for (var i = 0; i < texts3.length; i++) {
+            var text = texts3[i];
+
+            text.style.color = (text.style.color === 'rgb(255, 238, 0)') ? 'deepskyblue' : 'rgb(255, 238, 0)';
+        }
+
+
+
+    }
+    var clr = setInterval(flash, 1500);
+
+</script>

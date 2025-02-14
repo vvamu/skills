@@ -22,7 +22,7 @@ public class LessonService : AbstractLogModelService<Lesson>, ILessonService
     private readonly IQueryable<Lesson>? _fullInclude;
 
 
-    public LessonService(ApplicationDbContext context, IUserService userService, UserManager<ApplicationUser> userManager, INotificationService notificationService)
+    public LessonService(ApplicationDbContext context, IUserService userService, UserManager<ApplicationUser> userManager)//, INotificationService notificationService)
     {
         _context = context;
         _contextModel = _context.Lessons;
@@ -31,7 +31,7 @@ public class LessonService : AbstractLogModelService<Lesson>, ILessonService
         // _requestService = requestService;
         _userService = userService;
         _userManager = userManager;
-        _notificationService = notificationService;
+        //_notificationService = notificationService;
         _fullInclude = _context.Lessons
             .Include(x => x.Group).ThenInclude(x => x.LessonType).ThenInclude(x => x.AgeType)
             .Include(x => x.Group).ThenInclude(x => x.LessonType).ThenInclude(x => x.Course)
