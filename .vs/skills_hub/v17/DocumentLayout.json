@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\work\\2025\\skills\\",
+  "WorkspaceRootPath": "D:\\nadezhda\\own\\projects\\skills_hub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D5B902FE-5E13-4CE9-A904-941E36FD3419}|skills_hub\\skills_hub.csproj|d:\\work\\2025\\skills\\skills_hub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5B902FE-5E13-4CE9-A904-941E36FD3419}|skills_hub\\skills_hub.csproj|solutionrelative:skills_hub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\repository\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE4A8371-434A-40E2-92C0-F469F2FC71B5}|skills_hub.core\\skills_hub.core.csproj|solutionrelative:skills_hub.core\\repository\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5B902FE-5E13-4CE9-A904-941E36FD3419}|skills_hub\\skills_hub.csproj|d:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\views\\account\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D5B902FE-5E13-4CE9-A904-941E36FD3419}|skills_hub\\skills_hub.csproj|solutionrelative:skills_hub\\views\\account\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,38 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 173,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Views\\Account\\Create.cshtml",
+              "RelativeDocumentMoniker": "skills_hub\\Views\\Account\\Create.cshtml",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub\\Views\\Account\\Create.cshtml",
+              "RelativeToolTip": "skills_hub\\Views\\Account\\Create.cshtml",
+              "ViewState": "AgIAABoBAAAAAAAAAAAAAC0BAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T12:11:30.565Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\work\\2025\\skills\\skills_hub\\Program.cs",
-              "RelativeDocumentMoniker": "skills_hub\\Program.cs",
-              "ToolTip": "D:\\work\\2025\\skills\\skills_hub\\Program.cs",
-              "RelativeToolTip": "skills_hub\\Program.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAAAF0AAAADAAAAAAAAAA==",
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "skills_hub.core\\Services\\UserService.cs",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Services\\UserService.cs",
+              "RelativeToolTip": "skills_hub.core\\Services\\UserService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBsAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T20:12:29.086Z",
+              "WhenOpened": "2025-02-14T11:55:24.902Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 242,
-          "SelectedChildIndex": -1,
-          "Children": [
+            },
             {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\User\\UserRepository.cs",
+              "RelativeDocumentMoniker": "skills_hub.core\\Repository\\User\\UserRepository.cs",
+              "ToolTip": "D:\\nadezhda\\own\\projects\\skills_hub\\skills_hub.core\\Repository\\User\\UserRepository.cs",
+              "RelativeToolTip": "skills_hub.core\\Repository\\User\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T11:55:19.263Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace skills_hub.core.DTO;
 
 
@@ -7,13 +9,11 @@ public class UserCreateDTO
     public Guid BaseUserInfoId { get; set; }
     public string? PasswordChanged { get; set; }
     public string? PasswordChangedConfirm { get; set; }
-
-
-    public string Login { get; set; } //unique
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string Surname { get; set; } = "Default Surname";
-    public string Username { get; set; }
+    [Required]
+    public string UserName { get; set; }
     public string Sex { get; set; } = "Male";
 
     //[DataType(DataType.Date)]

@@ -1,0 +1,50 @@
+﻿p {
+    font-size: 19.2px;
+}
+
+li {
+    font-size: 18px;
+}
+
+.btn-primary {
+    background-color: #5da6d6;
+    border: none;
+}
+
+.btn-outline-primary, button {
+    border-color: #5da6d6;
+    color: #5da6d6;
+}
+
+    .btn-outline-primary:hover, button:hover {
+        background-color: #53ACF8 !important;
+        border: none;
+    }
+
+.navbar-light .navbar-brand {
+    color: #5da6d6 !important;
+}
+
+.nav-link, .nav-link:active {
+    color: #091E40 !important;
+}
+
+.list-unstyled div p, .levels-english div p {
+    padding-left: 4.2%;
+    font-size: 16px;
+}
+
+.direction-educations span {
+    color: #4c82a6;
+}
+
+.levels-english li a {
+    color: #091E40;
+}
+
+.list-conditions li {
+    font-size: 17px;
+}
+
+
+

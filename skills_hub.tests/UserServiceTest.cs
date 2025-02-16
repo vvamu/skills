@@ -1,6 +1,10 @@
+using AutoMapper;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Moq;
+using skills_hub.core.DTO;
+using skills_hub.domain.Models.ManyToMany;
 using skills_hub.domain.Models.User;
 using skills_hub.persistence;
 using skills_hub.tests.Helpers;
@@ -13,6 +17,8 @@ public class UserServiceTest : IDisposable
     private ApplicationDbContext? _db;
     private Mock<FakeUserManager> _mockUserManager;
     private Mock<FakeRoleManager> _mockRoleManager;
+    private Mock<IMapper> _mockMapper;
+
     [SetUp]
     public void Setup()
     {
@@ -34,17 +40,35 @@ public class UserServiceTest : IDisposable
 
 
         _mockRoleManager.Setup(r => r.Roles).Returns(new List<IdentityRole<Guid>> { teacherRole, studentRole }.AsQueryable());
+
+        _mockMapper = new Mock<IMapper>();
+
+        _mockMapper.Setup(m => m.Map<ApplicationUser>(It.IsAny<IdentityUser>()))
+.Returns<IdentityUser>(source => new ApplicationUser { /* Mapping logic here */ });
+        _mockMapper.Setup(m => m.Map<UserLoginDTO>(It.IsAny<ApplicationUser>()))
+.Returns<ApplicationUser>(source => new UserLoginDTO { /* Mapping logic here */ });
+        _mockMapper.Setup(m => m.Map<UserCreateDTO>(It.IsAny<ApplicationUser>()))
+.Returns<ApplicationUser>(source => new UserCreateDTO { /* Mapping logic here */ });
+
+        _mockMapper.Setup(m => m.Map<UserCreateDTO>(It.IsAny<BaseUserInfo>()))
+.Returns<BaseUserInfo>(source => new UserCreateDTO { /* Mapping logic here */ });
     }
+
+
     public void Dispose()
-    {
-        _db.Dispose();
-    }
+        {
+            _db.Dispose();
+        }
+
     [Test]
     public async Task Create()
     {
         var dbOptionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>().UseInMemoryDatabase("in_memory_db");
+     
+        
+        //AddAutoMapper(typeof(MappingProfile).Assembly);
 
-        //var sut = new skills_hub.core.Repository.User.UserService(_db, _mockUserManager.Object, _mockRoleManager.Object);
+        //var sut = new skills_hub.core.Repository.User.UserService(_db, _mockUserManager.Object, _mockRoleManager.Object, _mockMapper.Object,);
         //var result = await sut.();
         //var u = await sut.CreateUserAsync();
         //result = await sut.GetUsersAsync();

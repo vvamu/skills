@@ -15,7 +15,7 @@ public class GroupService : AbstractLogModelService<Group>, IGroupService
     private readonly INotificationService _notificationService;
     private readonly IIncludableQueryable<Group, PaymentCategory>? _fullInclude;
 
-    public GroupService(ApplicationDbContext context, INotificationService notificationService)//, ILessonService lessonService, IUserService userService, INotificationService notificationService)
+    public GroupService(ApplicationDbContext context)//, INotificationService notificationService), ILessonService lessonService, IUserService userService, INotificationService notificationService)
     {
         _context = context;
         _validator = new GroupValidator();
@@ -34,7 +34,7 @@ public class GroupService : AbstractLogModelService<Group>, IGroupService
             .Include(x => x.LessonType).ThenInclude(x => x.Location)
             .Include(x => x.LessonType).ThenInclude(x => x.AgeType)
             .Include(x => x.PaymentCategory);
-        _notificationService = notificationService;
+        //_notificationService = notificationService;
 
     }
     

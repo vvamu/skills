@@ -1,0 +1,120 @@
+﻿p {
+    font-size: 19.2px;
+}
+
+li {
+    font-size: 18px;
+}
+
+.btn-primary {
+    background-color: #5da6d6;
+    border: none;
+}
+
+.btn-outline-primary, button {
+    border-color: #5da6d6;
+    color: #5da6d6;
+}
+
+    .btn-outline-primary:hover, button:hover {
+        background-color: #53ACF8 !important;
+        border: none;
+    }
+
+.navbar-light .navbar-brand {
+    color: #5da6d6 !important;
+}
+
+.nav-link, .nav-link:active {
+    color: #091E40 !important;
+}
+
+.list-unstyled div p, .levels-english div p {
+    padding-left: 4.2%;
+    font-size: 16px;
+}
+
+.direction-educations span {
+    color: #4c82a6;
+}
+
+.levels-english li a {
+    color: #091E40;
+}
+
+.list-conditions li {
+    font-size: 17px;
+}
+
+
+
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ubuntu'), url(http://example.com/fonts/ubuntu.woff) format('woff');
+}
+
+*, body {
+    font-family: Ubuntu, "times new roman", times, roman, serif !important;
+}
+
+
+.chat-window {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.chat {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .chat li {
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+
+        .chat li.left .chat-body {
+            margin-left: 60px;
+        }
+
+        .chat li.right .chat-body {
+            margin-right: 60px;
+        }
+
+
+        .chat li .chat-body p {
+            margin: 0;
+            color: #777777;
+        }
+
+    .panel .slidedown .glyphicon, .chat .glyphicon {
+        margin-right: 5px;
+    }
+
+.panel-body {
+    overflow-y: scroll;
+    height: 500px; /*IF need to add place to send message - 370px*/
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}

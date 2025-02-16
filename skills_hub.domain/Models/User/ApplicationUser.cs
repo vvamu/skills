@@ -8,8 +8,6 @@ namespace skills_hub.domain.Models.User;
 
 public class ApplicationUser : IdentityUser<Guid>
 {
-    public string Login { get; set; } //unique
-    public override string? UserName { get; set; }
 
     [DataType(DataType.Date)]
     [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]

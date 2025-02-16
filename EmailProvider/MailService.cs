@@ -16,6 +16,8 @@ namespace EmailProvider;
 public class MailService : IMailService
 {
     private readonly MailOptions _mailOptions;
+    
+    
     public MailService(IOptionsSnapshot<MailOptions> options)
     {
         _mailOptions = options.Value;
